@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: oklch(7% 0.025 240);
+  --color-surface: oklch(11% 0.03 235);
+  --color-surface-2: oklch(15% 0.035 235);
+  --color-fg: oklch(92% 0.015 195);
+  --color-muted: oklch(55% 0.025 220);
+  --color-border: oklch(28% 0.05 225);
+  --color-accent: oklch(82% 0.22 195);
+  --color-accent-2: oklch(68% 0.28 320);
+  --color-accent-3: oklch(75% 0.20 60);
+  --color-green: oklch(65% 0.20 145);
+  
+  --color-glow-c: oklch(82% 0.22 195 / 0.35);
+  --color-glow-m: oklch(68% 0.28 320 / 0.35);
+
+  --font-mono: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
+  --font-body: "Inter", "Outfit", system-ui, sans-serif;
+  
+  --animate-scan-flicker: scanFlicker 10s ease-in-out infinite;
+  --animate-blink: blink 1s step-end infinite;
+  --animate-status-pulse: statusPulse 2s ease-in-out infinite;
+  --animate-fade-up: fadeUp 0.5s forwards;
+  --animate-glitch-1: glitch-1 4s infinite linear alternate-reverse;
+  --animate-glitch-2: glitch-2 4s infinite linear alternate-reverse;
+  --animate-glitch-3: glitch-3 4s infinite linear alternate-reverse;
+  --animate-glitch-reveal: glitch-reveal 0.1s 1s forwards;
+
+  @keyframes scanFlicker {
+    0%, 92%, 100% { opacity: 1; }
+    93% { opacity: 0.82; }
+    95% { opacity: 0.95; }
+    97% { opacity: 0.78; }
+  }
+  @keyframes blink { 
+    0%, 100% { opacity: 1; } 
+    50% { opacity: 0; } 
+  }
+  @keyframes statusPulse {
+    0%, 100% { box-shadow: 0 0 0 0 oklch(65% 0.20 145 / 0.7); }
+    50% { box-shadow: 0 0 0 5px oklch(65% 0.20 145 / 0); }
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes glitch-reveal {
+    from { opacity: 0; }
+    to { opacity: 0.7; }
+  }
+  @keyframes glitch-1 {
+    0% { clip-path: inset(80% 0 0 0); transform: translate(-2px, -1px); }
+    5% { clip-path: inset(10% 0 85% 0); transform: translate(2px, 1px); }
+    10% { clip-path: inset(40% 0 43% 0); transform: translate(-2px, -1px); }
+    15% { clip-path: inset(0 0 0 0); transform: translate(0); }
+    100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  }
+  @keyframes glitch-2 {
+    0% { clip-path: inset(10% 0 80% 0); transform: translate(2px, 1px); }
+    5% { clip-path: inset(85% 0 10% 0); transform: translate(-2px, -1px); }
+    10% { clip-path: inset(30% 0 35% 0); transform: translate(2px, 1px); }
+    15% { clip-path: inset(0 0 0 0); transform: translate(0); }
+    100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  }
+  @keyframes jitter {
+    0%, 100% { transform: translate(0); }
+    10% { transform: translate(-1px, -1px); }
+    20% { transform: translate(1px, 1px); }
+    30% { transform: translate(-1px, 1px); }
+    40% { transform: translate(1px, -1px); }
+    50% { transform: translate(-1px, 0); }
+  }
+  @keyframes color-flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+    75% { opacity: 0.9; }
+  }
+  @keyframes scanline {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-fg font-body overflow-x-hidden;
+    cursor: none;
+  }
+  
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent, transparent 2px,
+      oklch(0% 0 0 / 0.10) 2px, oklch(0% 0 0 / 0.10) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+    animation: scanFlicker 10s ease-in-out infinite;
+  }
+
+  body::after {
+    content: '';
+    position: fixed; inset: 0;
+    background-image:
+      linear-gradient(var(--color-accent) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-accent) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.022;
+    pointer-events: none;
+    z-index: 9998;
+  }
+}
+
+@layer components {
+  .clip-card { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); }
+  .clip-chip { clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); }
+  .clip-btn  { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
+}

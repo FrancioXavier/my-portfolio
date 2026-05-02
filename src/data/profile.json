@@ -1,0 +1,33 @@
+{
+  "name": "FRANCIO_XAVIER",
+  "eyebrow": "Full-Stack Developer // Available for hire",
+  "role": "> Building systems that scale.",
+  "bio": "Full-stack engineer specializing in cloud-native architecture, distributed systems, and high-performance APIs. From PHP monoliths to Go microservices — shipping production software across the entire stack for 8+ years.",
+  "cta": {
+    "primary": {
+      "label": "View Projects →",
+      "href": "#projects"
+    },
+    "secondary": {
+      "label": "Get in Touch",
+      "href": "#contact"
+    }
+  },
+  "social": [
+    {
+      "icon": "GH",
+      "label": "github.com/devname",
+      "href": "#"
+    },
+    {
+      "icon": "LI",
+      "label": "linkedin.com/in/devname",
+      "href": "#"
+    },
+    {
+      "icon": "EM",
+      "label": "dev@email.com",
+      "href": "mailto:dev@email.com"
+    }
+  ]
+}
