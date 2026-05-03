@@ -12,34 +12,34 @@ export function Navbar() {
   const isHome = pathname === '/';
 
   const socialIconConfigs = {
-    GH: 'logos:github-icon',
+    GH: 'simple-icons:github',
     LI: 'logos:linkedin-icon',
     EM: 'logos:google-gmail'
   };
 
   return (
-    <motion.nav 
+    <motion.nav
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-3.5 px-8 bg-bg/90 backdrop-blur-md border-b border-border"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
       <Link href="/" className="font-mono text-[0.8rem] text-accent no-underline tracking-[0.12em] drop-shadow-[0_0_12px_var(--color-glow-c)]">
-        SYS<span className="text-accent-2">://</span>PORTFOLIO<span className="animate-blink">_</span>
+        SYS<span className="text-accent-2">://</span>FRANCIO_XAVIER<span className="animate-blink">_</span>
       </Link>
-      
+
       <div className="flex items-center gap-10">
         {isHome ? (
           <ul className="hidden md:flex gap-7 list-none m-0 p-0">
             {['stacks', 'experience', 'projects'].map((id) => (
               <li key={id}>
-                <motion.a 
-                  href={`#${id}`} 
+                <motion.a
+                  href={`#${id}`}
                   className="relative group font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors duration-300 hover:text-accent"
                   whileHover={{ y: -2 }}
                 >
                   <span className="relative z-10">{id}</span>
-                  <motion.span 
+                  <motion.span
                     className="absolute -bottom-1 left-0 h-[1px] bg-accent shadow-[0_0_8px_var(--color-glow-c)]"
                     initial={{ width: 0 }}
                     whileHover={{ width: '100%' }}
@@ -62,7 +62,7 @@ export function Navbar() {
             {profile.social.map((item) => {
               const iconName = socialIconConfigs[item.icon as keyof typeof socialIconConfigs];
               return (
-                <a 
+                <a
                   key={item.label}
                   href={item.href}
                   target="_blank"
@@ -78,7 +78,7 @@ export function Navbar() {
                         alt={`${item.label} icon`}
                         width={16}
                         height={16}
-                        className="w-full h-full object-contain"
+                        className={`w-full h-full object-contain ${item.icon === 'GH' ? 'brightness-0 invert' : ''}`}
                         unoptimized
                       />
                     </div>
