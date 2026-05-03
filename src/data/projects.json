@@ -42,24 +42,7 @@
       "Observability with OpenTelemetry, tracing and metrics using Prometheus and Grafana",
       "GCP Cloud Run with GitHub Actions and Docker for CI/CD deploying the image to Artifact Registry"
     ],
-    "metrics": [
-      {
-        "value": "50k+",
-        "label": "Events / second"
-      },
-      {
-        "value": "< 4ms",
-        "label": "P99 publish latency"
-      },
-      {
-        "value": "3-node",
-        "label": "HA cluster setup"
-      },
-      {
-        "value": "0",
-        "label": "Message loss in 18 months"
-      }
-    ],
+    "metrics": [],
     "tags": [
       "Golang",
       "GCP",
