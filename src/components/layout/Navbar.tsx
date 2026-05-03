@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 import Image from 'next/image';
 import profile from '@/data/profile.json';
@@ -17,7 +18,12 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-3.5 px-8 bg-bg/90 backdrop-blur-md border-b border-border">
+    <motion.nav 
+      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between py-3.5 px-8 bg-bg/90 backdrop-blur-md border-b border-border"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+    >
       <Link href="/" className="font-mono text-[0.8rem] text-accent no-underline tracking-[0.12em] drop-shadow-[0_0_12px_var(--color-glow-c)]">
         SYS<span className="text-accent-2">://</span>PORTFOLIO<span className="animate-blink">_</span>
       </Link>
@@ -25,14 +31,30 @@ export function Navbar() {
       <div className="flex items-center gap-10">
         {isHome ? (
           <ul className="hidden md:flex gap-7 list-none m-0 p-0">
-            <li><a href="#stacks" className="font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors hover:text-accent hover:drop-shadow-[0_0_8px_var(--color-glow-c)]">Stacks</a></li>
-            <li><a href="#experience" className="font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors hover:text-accent hover:drop-shadow-[0_0_8px_var(--color-glow-c)]">Experience</a></li>
-            <li><a href="#projects" className="font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors hover:text-accent hover:drop-shadow-[0_0_8px_var(--color-glow-c)]">Projects</a></li>
+            {['stacks', 'experience', 'projects'].map((id) => (
+              <li key={id}>
+                <motion.a 
+                  href={`#${id}`} 
+                  className="relative group font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors duration-300 hover:text-accent"
+                  whileHover={{ y: -2 }}
+                >
+                  <span className="relative z-10">{id}</span>
+                  <motion.span 
+                    className="absolute -bottom-1 left-0 h-[1px] bg-accent shadow-[0_0_8px_var(--color-glow-c)]"
+                    initial={{ width: 0 }}
+                    whileHover={{ width: '100%' }}
+                    transition={{ duration: 0.3 }}
+                  ></motion.span>
+                </motion.a>
+              </li>
+            ))}
           </ul>
         ) : (
-          <Link href="/#projects" className="font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors hover:text-accent hover:drop-shadow-[0_0_8px_var(--color-glow-c)]">
-            ← BACK TO PROJECTS
-          </Link>
+          <motion.div whileHover={{ x: -4 }} transition={{ duration: 0.2 }}>
+            <Link href="/#projects" className="font-mono text-[0.72rem] text-muted uppercase tracking-[0.1em] transition-colors hover:text-accent hover:drop-shadow-[0_0_8px_var(--color-glow-c)]">
+              ← BACK TO PROJECTS
+            </Link>
+          </motion.div>
         )}
 
         <div className="flex items-center gap-2">
@@ -72,6 +94,6 @@ export function Navbar() {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }

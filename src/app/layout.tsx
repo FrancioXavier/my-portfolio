@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className="antialiased selection:bg-accent/30 selection:text-accent-2">
         <CursorTrail />
         <Navbar />
-        <main>
+        <main className="overflow-x-hidden">
           {children}
         </main>
         <Footer />

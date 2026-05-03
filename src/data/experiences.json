@@ -1,104 +1,79 @@
 [
   {
-    "slug": "senior-fullstack-nexacorp",
-    "eyebrow": "Full-time · Remote",
-    "role": "Senior Full-Stack Engineer",
-    "company": "NexaCorp Systems",
-    "period": "2022 — Present",
+    "slug": "fullstack-grupo-intra",
+    "eyebrow": "Full-time · On-site",
+    "role": "Full-Stack Engineer",
+    "company": "Grupo Intra",
+    "period": "2023 — Present",
     "type": "Full-time",
+    "location": "On-site",
+    "description": "",
+    "tags": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ],
+    "responsibilities": [
+      "Architect and develop new microsservices using Golang",
+      "Maintaned and develop new feature for ledacy systems, which have been developed in php 5.4",
+      "Develop and maintain full-stack monolithic system using Laravel and Vue.js",
+      "Code reviews to ensure code quality and best practices"
+    ],
+    "achievements": [],
+    "tech": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ]
+  },
+  {
+    "slug": "tech-lead-edtech",
+    "eyebrow": "Part-time · Remote",
+    "role": "Tech Lead",
+    "company": "Freelancer",
+    "period": "2023 — 2023",
+    "type": "Part-time",
     "location": "Remote",
-    "description": "Led architecture migration from PHP monolith to Go microservices, cutting API P95 latency by 60%. Oversaw 4-engineer squad delivering cloud-native features on GCP. Introduced zero-downtime deploys via canary releases on Kubernetes.",
-    "tags": ["Golang", "PHP", "GCP", "PostgreSQL", "Docker", "Redis"],
+    "description": "Spearheading development for an EdTech platform using Agile (Scrum/Kanban). Responsible for backlog refinement, task orchestration, and upholding code excellence through GitFlow standardization and peer reviews.",
+    "tags": [
+      "PHP",
+      "AWS",
+      "MySQL",
+      "JavaScript"
+    ],
     "responsibilities": [
-      "Architected and led migration of 8-year-old PHP monolith to Go microservices, reducing P95 API latency from 850ms to 340ms (–60%).",
-      "Designed event-driven pipeline on GCP Pub/Sub + Cloud Run, processing 2M+ daily events with zero message loss.",
-      "Managed 4-engineer squad using async sprint rituals; introduced RFC-based design review process that cut production incidents by 40%.",
-      "Implemented zero-downtime canary releases on Kubernetes; rolled out to 12 services over 3 months without a single rollback failure.",
-      "Defined observability standards: structured logging (JSON), distributed tracing (OpenTelemetry), SLO dashboards in Grafana.",
-      "Mentored 2 junior engineers to mid-level; conducted fortnightly 1-on-1s and quarterly technical growth reviews."
+      "Spearheaded development for an EdTech platform using Agile (Scrum/Kanban).",
+      "Led backlog refinement, task orchestration, and upheld code excellence through GitFlow standardization and peer reviews.",
+      "Backend development with PHP and MySQL",
+      "Deployment using AWS for production, during development was used VPS and docker"
     ],
     "achievements": [
-      { "value": "–60%", "label": "API P95 latency" },
-      { "value": "2M+", "label": "Daily events processed" },
-      { "value": "–40%", "label": "Production incidents" },
-      { "value": "12", "label": "Microservices migrated" }
+      {
+        "value": "100%",
+        "label": "Project delivery on time"
+      },
+      {
+        "value": "99.5%",
+        "label": "Measured uptime"
+      }
     ],
-    "tech": ["Golang", "PHP", "GCP", "Kubernetes", "PostgreSQL", "Redis", "Docker", "OpenTelemetry", "Grafana", "Pub/Sub"]
-  },
-  {
-    "slug": "fullstack-orbitlabs",
-    "eyebrow": "Full-time · Hybrid",
-    "role": "Full-Stack Developer",
-    "company": "Orbit Labs",
-    "period": "2020 — 2022",
-    "type": "Full-time",
-    "location": "Hybrid",
-    "description": "Built and maintained three SaaS products on Laravel + Vue.js. Integrated AWS infrastructure (EC2, RDS, S3) and implemented real-time notification pipelines using Redis pub/sub. Reduced deployment time from 45 min to 8 min via CI/CD automation.",
-    "tags": ["Laravel", "Vue.js", "AWS", "MySQL", "Redis", "TypeScript"],
-    "responsibilities": [
-      "Built and maintained three production SaaS products on Laravel + Vue.js, serving a combined 80k MAU.",
-      "Designed AWS infrastructure (EC2 Auto Scaling, RDS Multi-AZ, S3 + CloudFront) for two products; achieved 99.95% measured uptime.",
-      "Implemented real-time notification system using Redis pub/sub and WebSockets; handled 5k concurrent connections per node.",
-      "Reduced CI/CD pipeline from 45 min to 8 min by parallelizing test suites and caching Composer/NPM layers in GitHub Actions.",
-      "Led migration from MySQL 5.7 to 8.0 across two products with zero-downtime read-replica cutover strategy.",
-      "Wrote internal developer docs for onboarding; cut new-hire ramp time from 3 weeks to 10 days."
-    ],
-    "achievements": [
-      { "value": "80k", "label": "Monthly active users" },
-      { "value": "99.95%", "label": "Measured uptime" },
-      { "value": "5k", "label": "Concurrent WS connections" },
-      { "value": "–82%", "label": "CI/CD pipeline time" }
-    ],
-    "tech": ["Laravel", "Vue.js", "TypeScript", "AWS", "MySQL", "Redis", "Docker", "GitHub Actions", "Nginx"]
-  },
-  {
-    "slug": "backend-cipherwave",
-    "eyebrow": "Full-time · On-site",
-    "role": "Backend Developer",
-    "company": "CipherWave",
-    "period": "2018 — 2020",
-    "type": "Full-time",
-    "location": "On-site",
-    "description": "Developed RESTful APIs and ETL pipelines for a fintech platform serving 200k+ users. Hardened security posture: rate limiting, audit logging, WAF rules on Cloudflare. Maintained 99.97% uptime across quarterly audits.",
-    "tags": ["PHP", "Laravel", "PostgreSQL", "Redis", "Cloudflare"],
-    "responsibilities": [
-      "Developed RESTful APIs powering a fintech platform serving 200k+ registered users across 3 markets.",
-      "Built and maintained ETL pipelines ingesting 500k+ daily transactions from 7 banking partners via SFTP and REST webhooks.",
-      "Hardened security posture: token-bucket rate limiting, per-endpoint audit logs, WAF rules on Cloudflare — reduced abuse incidents by 70%.",
-      "Implemented PCI-DSS audit logging module; ensured 100% query traceability for regulator reviews.",
-      "Maintained 99.97% uptime across quarterly SLA audits; participated in 24/7 on-call rotation.",
-      "Introduced automated database migrations using Phinx, eliminating 3-hour manual deploy windows."
-    ],
-    "achievements": [
-      { "value": "200k+", "label": "Registered users" },
-      { "value": "500k+", "label": "Daily transactions" },
-      { "value": "–70%", "label": "Abuse incidents" },
-      { "value": "99.97%", "label": "SLA uptime" }
-    ],
-    "tech": ["PHP", "Laravel", "PostgreSQL", "Redis", "Cloudflare", "Nginx", "Linux", "Phinx"]
-  },
-  {
-    "slug": "junior-pixelcraft",
-    "eyebrow": "Full-time · On-site",
-    "role": "Junior Web Developer",
-    "company": "PixelCraft Agency",
-    "period": "2016 — 2018",
-    "type": "Full-time",
-    "location": "On-site",
-    "description": "Delivered 20+ client projects from design mockup to production on Linux servers. Built bespoke PHP/MySQL backends and integrated third-party payment and shipping APIs for e-commerce clients.",
-    "tags": ["PHP", "MySQL", "Linux", "TypeScript"],
-    "responsibilities": [
-      "Delivered 20+ client web projects end-to-end: from Photoshop mockup to production deployment on Linux VPS.",
-      "Developed bespoke PHP/MySQL backends: e-commerce carts, appointment booking systems, lead capture pipelines.",
-      "Integrated third-party APIs: Stripe payments, ShipStation logistics, Mailchimp campaigns.",
-      "Set up and managed client Linux servers (Ubuntu): Nginx config, SSL via Let's Encrypt, automated cron backups.",
-      "Collaborated directly with account managers and clients; led 3 client calls per week from brief to sign-off."
-    ],
-    "achievements": [
-      { "value": "20+", "label": "Projects delivered" },
-      { "value": "3", "label": "Client calls/week" },
-      { "value": "5", "label": "3rd-party APIs integrated" }
-    ],
-    "tech": ["PHP", "MySQL", "Linux", "Nginx", "JavaScript", "TypeScript", "Stripe API", "Let's Encrypt"]
+    "tech": [
+      "PHP",
+      "JavaScript",
+      "AWS",
+      "MySQL",
+      "Docker",
+      "GitHub Actions"
+    ]
   }
 ]

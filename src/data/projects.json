@@ -1,230 +1,256 @@
 [
   {
-    "slug": "nexaflow",
-    "status": "live",
-    "category": "Systems / Infrastructure",
-    "title": "NexaFlow",
-    "description": "High-throughput event streaming platform in Go. Handles 50k+ events/sec with custom TCP framing and at-least-once delivery guarantees.",
-    "role": "Systems / Infrastructure",
+    "slug": "discnotes",
+    "status": "wip",
+    "category": "Product / SaaS",
+    "title": "Discnotes",
+    "description": "Discover music by the comunity opinions based in reviews, ranking and lists created by users for users.",
+    "role": "Product / SaaS",
+    "preview": "DCN",
     "architecture": [
-      "CLIENT SDK (Go / PHP / TypeScript)",
-      "  │  binary framing over TCP",
+      "cmd/api/main.go",
+      "  │  creates & injects",
       "  ▼",
-      "NEXAFLOW BROKER (3-node cluster)",
-      "  ├── Topic Registry   ← PostgreSQL (offset store)",
-      "  ├── Consumer Groups  ← in-memory + WAL replay",
-      "  └── Health API       ← HTTP/JSON",
+      "internal/adapters/handler/",
+      "  ├── album, artist, song, review, list",
+      "  ├── auth, user, feed, search, comment",
+      "  └── middleware (auth, cors, logging, rate_limit, recovery)",
       "  │",
       "  ▼",
-      "DOWNSTREAM CONSUMERS",
-      "  ├── Audit Logger     → GCP Cloud Storage",
-      "  ├── Analytics Sink   → BigQuery",
-      "  └── Webhook Relay    → Customer endpoints"
+      "internal/service/",
+      "  ├── album_service, artist_service, song_service",
+      "  ├── review_service, list_service, auth_service",
+      "  └── user_service, feed_service, comment_service",
+      "  │",
+      "  ▼",
+      "internal/core/ports/ (INTERFACES)",
+      "  ├── repository   ← internal/adapters/repository (PostgreSQL)",
+      "  ├── spotify      ← internal/adapters/spotify (API + SWR)",
+      "  ├── cache        ← internal/adapters/cache (Redis)",
+      "  ├── storage      ← internal/adapters/storage (Cloudflare R2)",
+      "  └── token        ← pkg/jwt",
+      "  │",
+      "  ▲ defines entities",
+      "  │",
+      "internal/core/domain/",
+      "  └── (Album, Song, Artist, Review, List, User, Comment...)"
     ],
     "features": [
-      "Our backend generated millions of domain events per day with no durable, replayable delivery mechanism. Kafka was cost-prohibitive at the scale we needed; SQS lacked the replay semantics required for audit trails.",
-      "Built NexaFlow in Go — a lightweight streaming server with a custom binary framing protocol over TCP, consumer groups with offset tracking in PostgreSQL, and a backpressure-aware producer SDK. Deployed as a 3-node cluster on GCP Cloud Run with persistent volumes.",
-      "Replaced three ad-hoc webhook pipelines and two cron-based polling loops. Incident recovery time dropped from hours to seconds — consumers replay from any offset instantly."
+      "Driving backend scalability through performance optimization, advanced caching, and circuit breaker implementation for high-traffic external service environments.",
+      "The perfect mix of Brutalist web design and modern web application for a creative UI and a good UX",
+      "Clean Architecture to backend to maintain clean and scalable even with constant changes in external services",
+      "Observability with OpenTelemetry, tracing and metrics using Prometheus and Grafana",
+      "GCP Cloud Run with GitHub Actions and Docker for CI/CD deploying the image to Artifact Registry"
     ],
     "metrics": [
-      { "value": "50k+", "label": "Events / second" },
-      { "value": "< 4ms", "label": "P99 publish latency" },
-      { "value": "3-node", "label": "HA cluster setup" },
-      { "value": "0", "label": "Message loss in 18 months" }
+      {
+        "value": "50k+",
+        "label": "Events / second"
+      },
+      {
+        "value": "< 4ms",
+        "label": "P99 publish latency"
+      },
+      {
+        "value": "3-node",
+        "label": "HA cluster setup"
+      },
+      {
+        "value": "0",
+        "label": "Message loss in 18 months"
+      }
     ],
-    "tags": ["Golang", "GCP", "Docker", "PostgreSQL"],
-    "tech": ["Golang", "PostgreSQL", "GCP Cloud Run", "Docker", "TCP/binary framing", "OpenTelemetry"],
+    "tags": [
+      "Golang",
+      "GCP",
+      "Docker",
+      "PostgreSQL",
+      "Redis",
+      "Prometheus",
+      "Grafana",
+      "Next.js",
+      "Tailwind CSS",
+      "Cloudflare"
+    ],
+    "tech": [
+      "Golang",
+      "GCP",
+      "Docker",
+      "PostgreSQL",
+      "Redis",
+      "OpenTelemetry",
+      "Prometheus",
+      "Grafana",
+      "GitHub Actions",
+      "Next.js",
+      "Tailwind CSS",
+      "Cloudflare Workers"
+    ],
     "links": {
-      "github": "https://github.com/devname/nexaflow",
-      "demo": "#"
+      "github": "#",
+      "demo": "https://music-ratings-web.francioxaviersilva.workers.dev/pt"
     }
   },
   {
-    "slug": "orbitcms",
+    "slug": "projeto-x",
     "status": "live",
-    "category": "Platform / SaaS",
-    "title": "OrbitCMS",
-    "description": "Headless CMS: Laravel API backend, Next.js admin dashboard, GraphQL interface. Powers 12 production sites across three different design systems.",
-    "role": "Platform / SaaS",
+    "category": "E-commerce / Web App",
+    "title": "Project X",
+    "description": "Project aimed at increasing the online presence of AXARCA (Cariri Woodcut and Handicraft Association) through the creation of an e-commerce platform.",
+    "role": "Frontend Developer",
+    "preview": "AXA",
     "architecture": [
-      "EDITOR (Next.js admin)",
-      "  │  dynamic schema renderer",
+      "CLIENT (Next.js)",
+      "  │  responsive UI components",
       "  ▼",
-      "ORBIT API (Laravel)",
-      "  ├── REST /v1/*     ← site-facing delivery",
-      "  ├── GraphQL /gql   ← flexible content queries",
-      "  └── Auth (Sanctum) ← per-tenant API tokens",
-      "  │",
-      "  ▼",
-      "MySQL (multi-tenant, RLS)",
-      "  └── per-namespace content tables"
+      "E-COMMERCE API",
+      "  ├── Catalog Service  ← Product data",
+      "  └── Checkout Flow    ← Payment integration"
     ],
     "features": [
-      "Client teams were managing content in 4 different systems (WordPress, Strapi, raw DB scripts, CSV uploads). Consolidation was blocked because each site had unique content schemas and delivery requirements.",
-      "Designed a schema-on-write headless CMS with a dynamic field registry. Laravel provides a REST + GraphQL dual API; Next.js admin renders field editors from schema JSON. Multi-tenant from day one: each site gets isolated content namespaces under one DB with row-level security.",
-      "Migrated 12 production sites over 6 months with zero downtime. Content editors report 3× faster publishing. Developer onboarding for a new site type dropped from 2 weeks to 2 days."
+      "Complete development of the project's frontend using Next.js and TypeScript to ensure a fluid and high-performance user experience.",
+      "Implementation of an e-commerce platform focused on expanding the digital visibility of the Cariri Woodcut and Handicraft Association.",
+      "Creation of reusable components and strict typing to maintain scalability and ease of code maintenance."
     ],
     "metrics": [
-      { "value": "12", "label": "Production sites" },
-      { "value": "3×", "label": "Faster publishing" },
-      { "value": "2 days", "label": "New site onboarding" },
-      { "value": "4→1", "label": "CMS consolidation" }
+      {
+        "value": "Next.js",
+        "label": "Core Framework"
+      }
     ],
-    "tags": ["Laravel", "Next.js", "TypeScript", "MySQL"],
-    "tech": ["Laravel", "Next.js", "TypeScript", "MySQL", "GraphQL", "Sanctum", "Tailwind CSS", "Docker"],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Lucide Icons"
+    ],
     "links": {
       "demo": "#",
       "github": "#"
     }
   },
   {
-    "slug": "cloudvault",
-    "status": "wip",
-    "category": "Security / Storage",
-    "title": "CloudVault",
-    "description": "End-to-end encrypted object storage on AWS S3. Zero-knowledge architecture with per-user key derivation (PBKDF2) and a Vue.js client.",
-    "role": "Security / Storage",
-    "architecture": [
-      "BROWSER (Vue.js + WebCrypto API)",
-      "  │  key derivation (PBKDF2)",
-      "  │  client-side AES-256-GCM encrypt",
-      "  ▼",
-      "CLOUDVAULT API (Golang)",
-      "  ├── Auth (JWT, Redis session)",
-      "  ├── Presigned URL generator → S3",
-      "  └── Metadata store → PostgreSQL",
-      "  │",
-      "  ▼",
-      "AWS S3 (encrypted blobs only)",
-      "  └── Server never sees plaintext"
-    ],
-    "features": [
-      "Standard cloud storage (Dropbox, Google Drive, S3 with SSE) encrypts at rest using provider-managed keys — meaning the provider can technically read your data. We needed provable zero-knowledge storage.",
-      "Client-side AES-256-GCM encryption before upload. Each user's encryption key is derived from their passphrase using PBKDF2 (310,000 iterations, SHA-256), never sent to the server. Go backend handles upload orchestration and presigned S3 URLs. Vue.js SPA manages the WebCrypto API calls.",
-      "Work in progress. Alpha deployed with 3 design partners. Storage costs 40% cheaper than commercial alternatives at equivalent durability."
-    ],
-    "metrics": [
-      { "value": "AES-256", "label": "Encryption standard" },
-      { "value": "310k", "label": "PBKDF2 iterations" },
-      { "value": "–40%", "label": "vs. commercial cost" },
-      { "value": "3", "label": "Alpha design partners" }
-    ],
-    "tags": ["Vue.js", "AWS", "Golang", "Redis"],
-    "tech": ["Golang", "Vue.js", "TypeScript", "AWS S3", "Redis", "PostgreSQL", "WebCrypto API", "Docker"],
-    "links": {
-      "github": "https://github.com/devname/cloudvault",
-      "demo": "#"
-    }
-  },
-  {
-    "slug": "pgshield",
+    "slug": "efficiency-program",
     "status": "live",
-    "category": "Open Source / Security",
-    "title": "PGShield",
-    "description": "Open-source Postgres query firewall. Sits between app and DB, detecting anomalous query patterns via statistical baseline + alerting.",
-    "role": "Open Source / Security",
+    "category": "GovTech / Management",
+    "title": "Efficiency Program",
+    "description": "Management systems developed in partnership with the City Hall of Juazeiro do Norte to streamline public administration and health services.",
+    "role": "Fullstack Developer",
+    "preview": "EFP",
     "architecture": [
-      "APPLICATION",
-      "  │  standard libpq / connection string",
+      "CLIENT (Blade / Vue.js)",
+      "  │  server-side rendering",
       "  ▼",
-      "PGSHIELD PROXY (Golang, TCP)",
-      "  ├── Wire Protocol Parser (PostgreSQL v3)",
-      "  ├── Query Fingerprinter (normalized AST)",
-      "  ├── Baseline Engine     (rolling window stats)",
-      "  └── Alert Dispatcher    (Slack / PagerDuty / log)",
-      "  │",
-      "  ▼",
-      "POSTGRES (unmodified)"
+      "LARAVEL API (PHP 8.2)",
+      "  ├── Judicial Order Tracking",
+      "  ├── Medication Scheduling Service",
+      "  └── MySQL Database (Citizen Data)"
     ],
     "features": [
-      "SQL injection and credential compromise are the most common causes of database breaches — yet most Postgres deployments have no runtime query inspection layer. pgBouncer handles pooling; nothing handles threat detection.",
-      "PGShield is a transparent TCP proxy in Go that speaks the PostgreSQL wire protocol. It builds a rolling statistical baseline (query fingerprints, frequencies, execution times) per application role. Queries outside 3σ of normal trigger configurable actions: log, alert (Slack/PagerDuty webhook), or block.",
-      "Running in production at 2 companies with zero false-positive blocks in 6 months. Caught a compromised service account query pattern in staging before promotion."
+      "Developed and maintained critical management systems for the Juazeiro do Norte City Hall, focusing on judicial compliance and public health logistics.",
+      "Built a robust medication scheduling system to manage inventory and patient appointments, significantly improving access to essential medicine for citizens.",
+      "Implemented a secure tracking system for court orders (mandados judiciais) to ensure legal deadlines were met and administrative transparency was maintained."
     ],
     "metrics": [
-      { "value": "< 1ms", "label": "Proxy overhead P99" },
-      { "value": "0", "label": "False-positive blocks" },
-      { "value": "2", "label": "Production deployments" },
-      { "value": "3σ", "label": "Anomaly threshold" }
+      {
+        "value": "Laravel 10",
+        "label": "Core Framework"
+      },
+      {
+        "value": "MySQL",
+        "label": "Database"
+      },
+      {
+        "value": "Docker",
+        "label": "Deployment"
+      }
     ],
-    "tags": ["Golang", "PostgreSQL", "Linux", "Docker"],
-    "tech": ["Golang", "PostgreSQL wire protocol", "Linux", "Docker", "Prometheus metrics"],
-    "links": {
-      "github": "https://github.com/devname/pgshield",
-      "demo": "#"
-    }
-  },
-  {
-    "slug": "cfworker-kit",
-    "status": "live",
-    "category": "Open Source / Developer Tooling",
-    "title": "CFWorker Kit",
-    "description": "TypeScript toolkit for Cloudflare Workers: type-safe routing, middleware chains, and first-class KV/R2/D1 bindings. 1.2k GitHub stars.",
-    "role": "Open Source / Developer Tooling",
-    "architecture": [
-      "CFWORKER KIT (npm package)",
-      "  ├── Router       — typed path params, method matching",
-      "  ├── Middleware   — composable, async-first chain",
-      "  ├── Bindings",
-      "  │   ├── KVNamespace helpers",
-      "  │   ├── R2Bucket helpers",
-      "  │   └── D1Database helpers",
-      "  └── Types        — full Cloudflare Workers env types"
+    "tags": [
+      "Laravel",
+      "MySQL",
+      "Docker",
+      "PHP"
     ],
-    "features": [
-      "Cloudflare Workers' raw API is powerful but ergonomically rough — route matching, request/response typing, and binding wiring all require boilerplate. Existing frameworks were either too opinionated or lacked proper TypeScript generics.",
-      "Designed a minimal, zero-dependency toolkit: a typed router that infers path params, a composable middleware stack (same pattern as Express but with proper TS inference), and factory helpers for KV, R2, and D1 that surface binding errors at compile time.",
-      "Published on npm. 1.2k GitHub stars, 14k weekly downloads. Used in 3 of my own production projects and by the Cloudflare Workers community."
+    "tech": [
+      "Laravel 10",
+      "MySQL",
+      "Docker",
+      "PHP 8.2",
+      "Blade",
+      "Git"
     ],
-    "metrics": [
-      { "value": "1.2k", "label": "GitHub stars" },
-      { "value": "14k", "label": "Weekly npm downloads" },
-      { "value": "0", "label": "Runtime dependencies" },
-      { "value": "100%", "label": "TypeScript coverage" }
-    ],
-    "tags": ["TypeScript", "Cloudflare", "Next.js"],
-    "tech": ["TypeScript", "Cloudflare Workers", "Wrangler", "Vitest", "Rollup"],
-    "links": {
-      "demo": "https://cfworker-kit.dev",
-      "github": "https://github.com/devname/cfworker-kit"
-    }
-  },
-  {
-    "slug": "rediswatcher",
-    "status": "wip",
-    "category": "Developer Tooling / Observability",
-    "title": "RedisWatcher",
-    "description": "Real-time Redis monitoring dashboard in Vue.js. Visualizes memory footprint, keyspace events, and slow query logs via WebSocket streaming.",
-    "role": "Developer Tooling / Observability",
-    "architecture": [
-      "BROWSER (Vue.js SPA, SVG charts)",
-      "  │  WebSocket / JSON",
-      "  ▼",
-      "REDISWATCHER BACKEND (Golang)",
-      "  ├── Redis SUBSCRIBE (keyspace events)",
-      "  ├── SLOWLOG poller  (configurable interval)",
-      "  ├── INFO sampler    (memory, connections)",
-      "  └── WebSocket hub   (fan-out to browsers)",
-      "  │",
-      "  ▼",
-      "REDIS INSTANCE (any version ≥ 6)"
-    ],
-    "features": [
-      "Redis's built-in CLI tools (redis-cli monitor, SLOWLOG, INFO) are powerful but not friendly to share across teams or view historically. Existing GUIs (RedisInsight) are heavy Electron apps that can't be self-hosted behind auth.",
-      "Lightweight web dashboard: a Go backend subscribes to Redis keyspace notifications and SLOWLOG polling, streams events over WebSocket to a Vue.js SPA. Charts use plain SVG — no chart library — for a tiny bundle. Entire stack ships as a single Docker image.",
-      "Work in progress. Used internally; planning open-source release after adding multi-instance support."
-    ],
-    "metrics": [
-      { "value": "< 2MB", "label": "Docker image size" },
-      { "value": "SVG", "label": "No chart libraries" },
-      { "value": "1", "label": "Docker image to deploy" },
-      { "value": "WS", "label": "Real-time streaming" }
-    ],
-    "tags": ["Vue.js", "Redis", "TypeScript", "Docker"],
-    "tech": ["Vue.js", "TypeScript", "Golang", "Redis", "WebSocket", "Docker", "SVG"],
     "links": {
       "demo": "#",
       "github": "#"
+    }
+  },
+  {
+    "slug": "web-finance-automation",
+    "status": "live",
+    "category": "FinTech / Automation",
+    "title": "Web Finance Automation",
+    "description": "Multi-tenant financial automation API for accounting offices, featuring automatic transaction extraction from PDF cash reports using Go and Clean Architecture.",
+    "role": "Backend Developer",
+    "preview": "WFA",
+    "architecture": [
+      "APP LAYER (Echo v4 / Use Cases)",
+      "  │  command/query orchestration",
+      "  ▼",
+      "CORE DOMAIN (Entities / Ports)",
+      "  ├── Multi-Tenant Registry (tenant_id isolation)",
+      "  ├── PDF Parser (regex / position extraction)",
+      "  └── Business Rules (Credit/Debit/Category logic)",
+      "  │",
+      "  ▼",
+      "INFRASTRUCTURE (GORM / Postgres)",
+      "  └── Soft Delete & Relational Persistence"
+    ],
+    "features": [
+      "Designed a robust multi-tenant system where data for users, clients, bank accounts, and transactions are strictly isolated by tenant ID, ensuring security for accounting firm clients.",
+      "Implemented a high-performance PDF parser in Go to automate the extraction of financial transactions from cash reports, reducing manual entry time and marking extracted data for auditability.",
+      "Engineered the backend using Clean Architecture and Hexagonal principles to ensure high maintainability, testability, and a clear separation between business logic and external frameworks like Echo and GORM."
+    ],
+    "metrics": [
+      {
+        "value": "Go 1.25",
+        "label": "Runtime"
+      },
+      {
+        "value": "JWT",
+        "label": "Auth Security"
+      },
+      {
+        "value": "Echo v4",
+        "label": "API Framework"
+      },
+      {
+        "value": "PDF",
+        "label": "Auto-Extraction"
+      }
+    ],
+    "tags": [
+      "Go",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "tech": [
+      "Go",
+      "Echo v4",
+      "GORM",
+      "PostgreSQL",
+      "JWT",
+      "Viper",
+      "Docker",
+      "Air (Hot Reload)"
+    ],
+    "links": {
+      "github": "https://github.com/FrancioXavier/web-finnace-automation",
+      "demo": "#"
     }
   }
 ]

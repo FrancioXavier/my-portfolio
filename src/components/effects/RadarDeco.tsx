@@ -1,6 +1,6 @@
 export function RadarDeco() {
   return (
-    <svg className="absolute -right-[15%] top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-20 pointer-events-none md:-right-[5%] md:opacity-40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg className="absolute -right-[20%] top-1/2 -translate-y-1/2 w-[320px] h-[320px] md:w-[400px] md:h-[400px] opacity-20 pointer-events-none md:-right-[5%] md:opacity-40" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="200" cy="200" r="190" stroke="var(--color-accent)" strokeWidth="0.5" strokeDasharray="3 9"/>
       <circle cx="200" cy="200" r="140" stroke="var(--color-accent)" strokeWidth="0.5" strokeDasharray="2 6"/>
       <circle cx="200" cy="200" r="90" stroke="var(--color-accent)" strokeWidth="0.5"/>

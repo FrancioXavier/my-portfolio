@@ -14,14 +14,6 @@
       {
         "name": "Golang",
         "icon": "go"
-      },
-      {
-        "name": "Node.js",
-        "icon": "nodedotjs"
-      },
-      {
-        "name": "NestJS",
-        "icon": "nestjs"
       }
     ]
   },

@@ -47,6 +47,7 @@ export interface Project {
   status: 'live' | 'wip';
   title: string;
   category: string;
+  preview: string;
   description: string;
   tags: string[];
   role: string;

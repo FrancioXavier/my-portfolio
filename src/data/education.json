@@ -1,24 +1,7 @@
 [
   {
-    "degree": "B.Sc. Computer Science",
-    "school": "// State University of Technology",
-    "period": "2012 — 2016 · GPA 3.8 / 4.0"
-  },
-  {
-    "degree": "AWS Solutions Architect — Professional",
-    "school": "// Amazon Web Services",
-    "period": "2023 · Credential ID: AWS-SAP-XXXX",
-    "accentColor": "var(--color-accent-2)"
-  },
-  {
-    "degree": "Google Cloud Professional Data Engineer",
-    "school": "// Google Cloud",
-    "period": "2022 · Credential ID: GCP-PDE-XXXX",
-    "accentColor": "var(--color-accent-3)"
-  },
-  {
-    "degree": "Certified Kubernetes Administrator (CKA)",
-    "school": "// CNCF / Linux Foundation",
-    "period": "2021 · Credential ID: CKA-XXXX"
+    "degree": "Computer Science",
+    "school": "// Universidade Federal do Cariri",
+    "period": "2022 — Present"
   }
 ]

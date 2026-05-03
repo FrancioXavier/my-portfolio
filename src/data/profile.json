@@ -1,12 +1,12 @@
 {
   "name": "FRANCIO_XAVIER",
-  "eyebrow": "Full-Stack Developer // Available for hire",
+  "eyebrow": "Full-Stack Engineer",
   "role": "> Building systems that scale.",
   "bio": "Full-stack engineer specializing in cloud-native architecture, distributed systems, and high-performance APIs. From PHP monoliths to Go microservices — shipping production software across the entire stack for 8+ years.",
   "cta": {
     "primary": {
-      "label": "View Projects →",
-      "href": "#projects"
+      "label": "VIEW EXPERIENCE",
+      "href": "#experience"
     },
     "secondary": {
       "label": "Get in Touch",
@@ -16,18 +16,18 @@
   "social": [
     {
       "icon": "GH",
-      "label": "github.com/devname",
-      "href": "#"
+      "label": "github.com/FrancioXavier",
+      "href": "https://github.com/FrancioXavier"
     },
     {
       "icon": "LI",
-      "label": "linkedin.com/in/devname",
-      "href": "#"
+      "label": "linkedin.com/in/francio-xavier-dev",
+      "href": "https://www.linkedin.com/in/francio-xavier-dev/"
     },
     {
       "icon": "EM",
-      "label": "dev@email.com",
-      "href": "mailto:dev@email.com"
+      "label": "francioxaviersilva@gmail.com",
+      "href": "mailto:francioxaviersilva@gmail.com"
     }
   ]
 }

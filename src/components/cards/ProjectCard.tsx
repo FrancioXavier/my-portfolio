@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 export function ProjectCard({ project }: { project: Project }) {
   const isWip = project.status === 'wip';
-  
+
   const thumbClasses = clsx(
     "h-[160px] relative border-b border-border overflow-hidden",
     project.slug === 'cloudvault' && "bg-[linear-gradient(135deg,var(--color-surface-2),oklch(18%_0.04_280))]",
@@ -24,19 +24,19 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className={thumbClasses}>
         <div className="absolute inset-0 opacity-10" style={gridStyle}></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-mono text-4xl font-bold tracking-[0.1em] text-border group-hover:text-accent-2 transition-colors duration-300">
-          {project.slug === 'orbitcms' ? '[CMS]' : project.slug === 'cloudvault' ? '[CVT]' : project.slug === 'pgshield' ? '[PGS]' : project.slug === 'cfworker-kit' ? '[CFW]' : project.slug === 'rediswatcher' ? '[RDW]' : '[NXF]'}
+          [{project.preview}]
         </div>
-        
+
         <div className={clsx(
           "absolute top-4 right-4 font-mono text-[0.6rem] py-1 px-2 border",
-          isWip 
-            ? "border-accent-3 text-accent-3 bg-accent-3/10" 
+          isWip
+            ? "border-accent-3 text-accent-3 bg-accent-3/10"
             : "border-green text-green bg-green/10"
         )}>
           {isWip ? '◐ WIP' : '● LIVE'}
         </div>
       </div>
-      
+
       <div className="p-6 md:p-8 flex-1 flex flex-col">
         <div className="font-mono text-lg text-fg tracking-[0.05em] mb-2">{project.title}</div>
         <p className="font-body text-muted text-[0.88rem] leading-[1.6] mb-5 flex-1 line-clamp-3 overflow-hidden text-ellipsis">
