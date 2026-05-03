@@ -1,6 +1,7 @@
 import { ScrollReveal } from '@/components/effects/ScrollReveal';
 import { CyberpunkButton } from '@/components/ui/CyberpunkButton';
 import { ContactForm } from '@/features/contact';
+import profile from '@/data/profile.json';
 
 export function ContactSection() {
   return (
@@ -27,15 +28,24 @@ export function ContactSection() {
                   {"// EXTERNAL_LINKS"}
                 </h3>
                 <div className="flex flex-col gap-4">
-                  <CyberpunkButton href="mailto:contato.francio@gmail.com" variant="ghost" className="w-full sm:w-max">
-                    EXECUTE: EMAIL
-                  </CyberpunkButton>
-                  <CyberpunkButton href="https://linkedin.com/in/francio-xavier" variant="ghost" className="w-full sm:w-max">
-                    LINKEDIN_STATION
-                  </CyberpunkButton>
-                  <CyberpunkButton href="https://github.com/francioxavier" variant="ghost" className="w-full sm:w-max">
-                    SOURCE_CODE_REPO
-                  </CyberpunkButton>
+                  {profile.social.map((item) => {
+                    const stylizedLabels: Record<string, string> = {
+                      GH: 'SOURCE_CODE_REPO',
+                      LI: 'LINKEDIN_STATION',
+                      EM: 'EXECUTE: EMAIL'
+                    };
+
+                    return (
+                      <CyberpunkButton
+                        key={item.icon}
+                        href={item.href}
+                        variant="ghost"
+                        className="w-full sm:w-max"
+                      >
+                        {stylizedLabels[item.icon] || item.label}
+                      </CyberpunkButton>
+                    );
+                  })}
                 </div>
               </div>
 
