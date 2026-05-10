@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "Francio Xavier — Software Engineer",
+    "description": "Francio Xavier's Portfolio — Full-Stack Engineer specializing in scalable architecture and modern web experiences."
+  },
+  "skipLink": "SKIP TO CONTENT",
+  "nav": {
+    "stacks": "stacks",
+    "experience": "experience",
+    "projects": "projects",
+    "contact": "contact",
+    "back": {
+      "experience": "← BACK TO EXPERIENCE",
+      "projects": "← BACK TO PROJECTS",
+      "home": "← BACK TO HOME"
+    },
+    "availableForHire": "AVAILABLE FOR HIRE"
+  },
+  "footer": {
+    "marquee": [
+      "BUILT WITH NEXT.JS",
+      "STATIC EXPORT",
+      "DEPLOYED ON GITHUB PAGES",
+      "CYBERPUNK DESIGN OS",
+      "OPEN FOR OPPORTUNITIES",
+      "RESPONSE_TIME < 24H",
+      "LOCATION ::: BRAZIL"
+    ],
+    "navigationHeader": "// NAVIGATION",
+    "externalLinksHeader": "// EXTERNAL_LINKS",
+    "available": "AVAILABLE FOR REMOTE / HYBRID ROLES",
+    "rights": "ALL TRANSMISSIONS SIGNED",
+    "nominal": "NOMINAL",
+    "nav": {
+      "stacks": "Stacks",
+      "experience": "Experience",
+      "projects": "Projects",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "openToOpportunities": "Open to opportunities",
+    "scroll": "SCROLL"
+  },
+  "stacks": {
+    "label": "Tech Stack",
+    "title": "ARSENAL",
+    "subtitle": "Tools and technologies I use to build, deploy, and scale production systems.",
+    "count": "{categories} CATEGORIES // {modules} MODULES",
+    "statusReady": "STATUS: READY // {count} MODULES LOADED",
+    "core": "[ SYSTEM_CORE: STABLE ]"
+  },
+  "experience": {
+    "label": "Work History",
+    "title": "EXPERIENCE",
+    "subtitle": "Professional roles — click any entry for the full technical breakdown.",
+    "count": "{count} POSITIONS LOGGED",
+    "page": {
+      "navBase": "POSITION",
+      "coreResponsibilities": "CORE RESPONSIBILITIES",
+      "keyAchievements": "KEY ACHIEVEMENTS",
+      "technologiesUsed": "TECHNOLOGIES USED",
+      "positionFallback": "POSITION"
+    }
+  },
+  "projects": {
+    "label": "Selected Works",
+    "title": "PROJECTS",
+    "subtitle": "Featured builds and technical deep-dives.",
+    "count": "{count} ARTIFACTS",
+    "wip": "◐ WIP",
+    "live": "● LIVE",
+    "viewProject": "VIEW PROJECT",
+    "page": {
+      "navBase": "PROJECT",
+      "wipFull": "◐ IN DEVELOPMENT",
+      "liveFull": "● LIVE SYSTEM",
+      "role": "ROLE",
+      "launchApp": "LAUNCH_APP →",
+      "viewSource": "VIEW_SOURCE",
+      "missionBriefing": "MISSION_BRIEFING",
+      "systemArchitecture": "SYSTEM_ARCHITECTURE",
+      "techStack": "TECH_STACK",
+      "frontend": "Frontend",
+      "backend": "Backend / Infra",
+      "asciiDiagram": "ASCII::DIAGRAM",
+      "projectFallback": "PROJECT"
+    }
+  },
+  "education": {
+    "label": "Academic",
+    "title": "EDUCATION",
+    "subtitle": "Degrees and continuous learning.",
+    "count": "{count} RECORDS",
+    "active": "STATUS: ACTIVE"
+  },
+  "contact": {
+    "endOfFile": "END_OF_FILE // 05",
+    "title": "CONNECT",
+    "subtitle": "Currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you.",
+    "externalLinksHeader": "EXTERNAL_LINKS",
+    "labels": {
+      "GH": "SOURCE_CODE_REPO",
+      "LI": "LINKEDIN_STATION",
+      "EM": "EXECUTE: EMAIL"
+    },
+    "panel": {
+      "establishing": "ESTABLISHING_LINK...",
+      "responseTime": "RESPONSE_TIME:",
+      "responseValue": "< 24H",
+      "location": "LOCATION:",
+      "locationValue": "REMOTE / BRAZIL",
+      "timezone": "TIMEZONE:",
+      "timezoneValue": "UTC-3",
+      "ready": "READY_FOR_HANDSHAKE"
+    },
+    "form": {
+      "header": "FORM // CONNECT",
+      "secure": "SECURE",
+      "nameLabel": "[01] SENDER_NAME",
+      "namePlaceholder": "ENTER_IDENTIFIER",
+      "emailLabel": "[02] SENDER_EMAIL",
+      "emailPlaceholder": "ENTER_ENCRYPTED_ADDR",
+      "messageLabel": "[03] TRANSMISSION_DATA",
+      "messagePlaceholder": "ESTABLISHING_COMMUNICATION_PROTOCOL...",
+      "secureEstablished": "SECURE_LINE_ESTABLISHED",
+      "submit": "EXECUTE: SEND →",
+      "submitting": "TRANSMITTING...",
+      "successTitle": "MESSAGE_TRANSMITTED",
+      "successDetail": "Your transmission has been successfully encrypted and sent. I will analyze the data and respond shortly."
+    }
+  },
+  "boot": {
+    "lines": [
+      "INIT_SYSTEM ... OK",
+      "LOADING_MODULES [██████████] 100%",
+      "CONNECTING_TO_MAINFRAME ... ESTABLISHED",
+      "USER_AUTH ... GRANTED",
+      "> WELCOME TO PORTFOLIO_OS"
+    ]
+  },
+  "notFound": {
+    "fault": "SYSTEM_FAULT // 404",
+    "log": "> SCAN_RESULT ............... NO_MATCH\n> URI_LOOKUP ................. FAILED\n> ROUTE_INDEX ................ MISSING\n> RECOVERY_PROTOCOL .......... ENGAGED\n\n> The transmission you requested could not be located in the\n> archive. The signature may have been moved, corrupted, or\n> never existed.",
+    "returnHome": "RETURN_HOME",
+    "viewProjects": "VIEW_PROJECTS",
+    "reportIssue": "REPORT_ISSUE",
+    "suggestion": "SUGGESTION:"
+  },
+  "breadcrumb": {
+    "home": "HOME",
+    "projects": "PROJECTS",
+    "experience": "EXPERIENCE"
+  },
+  "pageNav": {
+    "previous": "PREVIOUS",
+    "next": "NEXT"
+  },
+  "rootRedirect": {
+    "heading": "Choose a language / Escolha um idioma",
+    "english": "English",
+    "portuguese": "Português"
+  }
+}

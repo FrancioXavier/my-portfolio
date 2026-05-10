@@ -1,0 +1,51 @@
+[
+  {
+    "id": "backend",
+    "label": "Backend / Server",
+    "items": [
+      { "name": "PHP", "icon": "php" },
+      { "name": "Laravel", "icon": "laravel" },
+      { "name": "Golang", "icon": "go" }
+    ]
+  },
+  {
+    "id": "frontend",
+    "label": "Frontend",
+    "items": [
+      { "name": "Next.js", "icon": "nextdotjs" },
+      { "name": "Vue.js", "icon": "vuedotjs" },
+      { "name": "TypeScript", "icon": "typescript" },
+      { "name": "Tailwind", "icon": "tailwindcss" }
+    ]
+  },
+  {
+    "id": "data",
+    "label": "Data",
+    "items": [
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "MySQL", "icon": "mysql" },
+      { "name": "Redis", "icon": "redis" },
+      { "name": "MongoDB", "icon": "mongodb" }
+    ]
+  },
+  {
+    "id": "infrastructure",
+    "label": "Infrastructure",
+    "items": [
+      { "name": "AWS", "icon": "amazonwebservices" },
+      { "name": "GCP", "icon": "googlecloud" },
+      { "name": "Cloudflare", "icon": "cloudflare" },
+      { "name": "Docker", "icon": "docker" },
+      { "name": "Linux", "icon": "linux" },
+      { "name": "Github Actions", "icon": "github" }
+    ]
+  },
+  {
+    "id": "observability",
+    "label": "Observability",
+    "items": [
+      { "name": "Grafana", "icon": "grafana" },
+      { "name": "Prometheus", "icon": "prometheus" }
+    ]
+  }
+]

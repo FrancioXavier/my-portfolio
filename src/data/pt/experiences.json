@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "fullstack-grupo-intra",
+    "eyebrow": "Tempo integral · Presencial",
+    "role": "Engenheiro Full-Stack",
+    "company": "Grupo Intra",
+    "period": "2023 — Atual",
+    "type": "Tempo integral",
+    "location": "Presencial",
+    "description": "Engenheiro Full-Stack no Grupo Intra, atuando em múltiplos projetos com diferentes stacks de tecnologia.",
+    "tags": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ],
+    "responsibilities": [
+      "Arquitetar e desenvolver novos microsserviços em Golang.",
+      "Manter e implementar novas features em sistemas legados originalmente construídos em PHP 5.4.",
+      "Desenvolver e manter um sistema monolítico full-stack em Laravel e Vue.js.",
+      "Realizar code reviews para garantir qualidade de código e boas práticas."
+    ],
+    "achievements": [],
+    "tech": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ]
+  },
+  {
+    "slug": "tech-lead-edtech",
+    "eyebrow": "Meio período · Remoto",
+    "role": "Tech Lead",
+    "company": "Plataforma EdTech",
+    "period": "2023 — 2023",
+    "type": "Meio período",
+    "location": "Remoto",
+    "description": "Liderança técnica do desenvolvimento de uma plataforma EdTech usando metodologias ágeis (Scrum/Kanban). Responsável pelo refinamento de backlog, orquestração de tarefas e manutenção da excelência de código por meio de padronização GitFlow e revisões de pares.",
+    "tags": [
+      "PHP",
+      "AWS",
+      "MySQL",
+      "JavaScript"
+    ],
+    "responsibilities": [
+      "Liderança do desenvolvimento de uma plataforma EdTech usando metodologias ágeis (Scrum/Kanban).",
+      "Condução de refinamento de backlog, orquestração de tarefas e manutenção da excelência de código por meio de padronização GitFlow e code reviews.",
+      "Desenvolvimento backend em PHP e MySQL.",
+      "Deploy em produção usando AWS; durante o desenvolvimento utilizava-se VPS e Docker."
+    ],
+    "achievements": [
+      {
+        "value": "100%",
+        "label": "Entregas no prazo"
+      },
+      {
+        "value": "99.5%",
+        "label": "Uptime medido"
+      }
+    ],
+    "tech": [
+      "PHP",
+      "JavaScript",
+      "AWS",
+      "MySQL",
+      "Docker",
+      "GitHub Actions"
+    ]
+  }
+]

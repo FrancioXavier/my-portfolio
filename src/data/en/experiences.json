@@ -1,0 +1,79 @@
+[
+  {
+    "slug": "fullstack-grupo-intra",
+    "eyebrow": "Full-time · On-site",
+    "role": "Full-Stack Engineer",
+    "company": "Grupo Intra",
+    "period": "2023 — Present",
+    "type": "Full-time",
+    "location": "On-site",
+    "description": "Full-Stack Engineer at Grupo Intra, working on multiple projects with different tech stacks.",
+    "tags": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ],
+    "responsibilities": [
+      "Architect and develop new microservices using Golang.",
+      "Maintain and develop new features for legacy systems originally built on PHP 5.4.",
+      "Develop and maintain a full-stack monolithic system using Laravel and Vue.js.",
+      "Conduct code reviews to ensure code quality and best practices."
+    ],
+    "achievements": [],
+    "tech": [
+      "Golang",
+      "PHP",
+      "AWS",
+      "PostgreSQL",
+      "Docker",
+      "Redis",
+      "Laravel",
+      "Vue.js"
+    ]
+  },
+  {
+    "slug": "tech-lead-edtech",
+    "eyebrow": "Part-time · Remote",
+    "role": "Tech Lead",
+    "company": "EdTech platform",
+    "period": "2023 — 2023",
+    "type": "Part-time",
+    "location": "Remote",
+    "description": "Spearheading development for an EdTech platform using Agile (Scrum/Kanban). Responsible for backlog refinement, task orchestration, and upholding code excellence through GitFlow standardization and peer reviews.",
+    "tags": [
+      "PHP",
+      "AWS",
+      "MySQL",
+      "JavaScript"
+    ],
+    "responsibilities": [
+      "Spearheaded development for an EdTech platform using Agile (Scrum/Kanban).",
+      "Led backlog refinement, task orchestration, and upheld code excellence through GitFlow standardization and peer reviews.",
+      "Backend development with PHP and MySQL.",
+      "Deployment using AWS for production; during development used VPS and Docker."
+    ],
+    "achievements": [
+      {
+        "value": "100%",
+        "label": "Project delivery on time"
+      },
+      {
+        "value": "99.5%",
+        "label": "Measured uptime"
+      }
+    ],
+    "tech": [
+      "PHP",
+      "JavaScript",
+      "AWS",
+      "MySQL",
+      "Docker",
+      "GitHub Actions"
+    ]
+  }
+]

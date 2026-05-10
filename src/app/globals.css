@@ -11,13 +11,13 @@
   --color-accent-2: oklch(68% 0.28 320);
   --color-accent-3: oklch(75% 0.20 60);
   --color-green: oklch(65% 0.20 145);
-  
+
   --color-glow-c: oklch(82% 0.22 195 / 0.35);
   --color-glow-m: oklch(68% 0.28 320 / 0.35);
 
   --font-mono: "JetBrains Mono", "Fira Code", "Roboto Mono", monospace;
   --font-body: "Inter", "Outfit", system-ui, sans-serif;
-  
+
   --animate-scan-flicker: scanFlicker 10s ease-in-out infinite;
   --animate-blink: blink 1s step-end infinite;
   --animate-status-pulse: statusPulse 2s ease-in-out infinite;
@@ -26,6 +26,8 @@
   --animate-glitch-2: glitch-2 4s infinite linear alternate-reverse;
   --animate-glitch-3: glitch-3 4s infinite linear alternate-reverse;
   --animate-glitch-reveal: glitch-reveal 0.1s 1s forwards;
+  --animate-marquee: marquee 60s linear infinite;
+  --animate-bounce-down: bounceDown 1.6s ease-in-out infinite;
 
   @keyframes scanFlicker {
     0%, 92%, 100% { opacity: 1; }
@@ -33,9 +35,9 @@
     95% { opacity: 0.95; }
     97% { opacity: 0.78; }
   }
-  @keyframes blink { 
-    0%, 100% { opacity: 1; } 
-    50% { opacity: 0; } 
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
   @keyframes statusPulse {
     0%, 100% { box-shadow: 0 0 0 0 oklch(65% 0.20 145 / 0.7); }
@@ -80,17 +82,67 @@
     0% { transform: translateY(-100%); }
     100% { transform: translateY(100%); }
   }
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes bounceDown {
+    0%, 100% { transform: translateY(0); opacity: 0.6; }
+    50% { transform: translateY(8px); opacity: 1; }
+  }
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 96px;
   }
   body {
     @apply bg-bg text-fg font-body overflow-x-hidden;
-    cursor: none;
   }
-  
+
+  /* Custom cursor only on devices that actually have a hover-capable pointer */
+  @media (hover: hover) and (pointer: fine) {
+    body { cursor: none; }
+    a, button, [role="button"], input, textarea, select, label { cursor: none; }
+  }
+
+  /* Selection styling */
+  ::selection {
+    background: oklch(82% 0.22 195 / 0.30);
+    color: var(--color-accent-2);
+  }
+
+  /* Scrollbar — terminal flavor */
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+    border-left: 1px solid var(--color-border);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-accent), var(--color-accent-2));
+    border: 2px solid var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: var(--color-accent); }
+  html { scrollbar-color: var(--color-accent) var(--color-bg); scrollbar-width: thin; }
+
+  /* Focus-visible for keyboard users */
+  :focus-visible {
+    outline: 1px solid var(--color-accent);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 4px oklch(82% 0.22 195 / 0.18);
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -121,12 +173,13 @@
   .clip-card { clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); }
   .clip-chip { clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px)); }
   .clip-btn  { clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px)); }
-  
+  .clip-frame { clip-path: polygon(0 14px, 14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px)); }
+
   .btn-scanline {
     position: relative;
     overflow: hidden;
   }
-  
+
   .btn-scanline::after {
     content: "";
     position: absolute;
@@ -142,5 +195,72 @@
     transform: translateY(-100%);
     animation: scanline 3s linear infinite;
     pointer-events: none;
+  }
+
+  /* Decorative corner brackets on container — pure CSS */
+  .corner-frame {
+    position: relative;
+  }
+  .corner-frame::before,
+  .corner-frame::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: var(--color-accent);
+    pointer-events: none;
+    transition: border-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+  }
+  .corner-frame::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+  }
+  .corner-frame::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+  }
+  .corner-frame:hover::before,
+  .corner-frame:hover::after {
+    width: 22px;
+    height: 22px;
+    border-color: var(--color-accent-2);
+  }
+
+  /* Skip-to-content for keyboard / screen-reader users */
+  .skip-link {
+    position: fixed;
+    top: -100px;
+    left: 16px;
+    z-index: 10100;
+    padding: 8px 14px;
+    background: var(--color-bg);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: top 0.2s ease;
+  }
+  .skip-link:focus {
+    top: 16px;
+  }
+
+  /* Marquee row used in footer */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee var(--marquee-duration, 60s) linear infinite;
+  }
+
+  /* Ascii-flavored "noise dots" backdrop for cards */
+  .dotgrid-bg {
+    background-image: radial-gradient(var(--color-border) 1px, transparent 1px);
+    background-size: 14px 14px;
+    background-position: 0 0;
   }
 }

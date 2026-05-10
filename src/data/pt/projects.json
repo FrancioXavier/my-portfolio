@@ -1,0 +1,237 @@
+[
+  {
+    "slug": "discnotes",
+    "status": "wip",
+    "category": "Produto / SaaS",
+    "title": "Discnotes",
+    "description": "Descubra música através das opiniões da comunidade, com base em reviews, rankings e listas criados por usuários para usuários.",
+    "role": "Produto / SaaS",
+    "preview": "DCN",
+    "architecture": [
+      "Cliente (Usuário)",
+      "  │",
+      "  ▼",
+      "HTTP Handler",
+      "  │",
+      "  ▼",
+      "Camada de Serviço",
+      "  ├── Metadados Spotify",
+      "  │     │",
+      "  │     ▼",
+      "  │   SpotifyResolver",
+      "  │     ├── 1. Cache SWR (Snappy) → Redis",
+      "  │     └── 2. Cache Miss → Circuit Breaker → Spotify API",
+      "  │",
+      "  ├── Dados do Usuário",
+      "  │     │",
+      "  │     ▼",
+      "  │   Repository",
+      "  │     └── PostgreSQL",
+      "  │",
+      "  └── Upload de Avatar",
+      "        │",
+      "        ▼",
+      "      Cloudflare R2"
+    ],
+    "features": [
+      "Escalabilidade do backend através de otimização de performance, cache avançado e implementação de circuit breaker para ambientes com alto tráfego em serviços externos.",
+      "Mistura ideal de design web brutalista com aplicação web moderna, gerando uma UI criativa e ótima UX.",
+      "Clean Architecture no backend para manter o código limpo e escalável mesmo com mudanças constantes em serviços externos.",
+      "Observabilidade com OpenTelemetry, tracing e métricas via Prometheus e Grafana.",
+      "GCP Cloud Run com GitHub Actions e Docker para CI/CD, com deploy de imagens para o Artifact Registry."
+    ],
+    "metrics": [],
+    "tags": [
+      "Golang",
+      "GCP",
+      "Docker",
+      "PostgreSQL",
+      "Redis",
+      "Prometheus",
+      "Grafana",
+      "Next.js",
+      "Tailwind CSS",
+      "Cloudflare"
+    ],
+    "tech": [
+      "Golang",
+      "GCP",
+      "Docker",
+      "PostgreSQL",
+      "Redis",
+      "OpenTelemetry",
+      "Prometheus",
+      "Grafana",
+      "GitHub Actions",
+      "Next.js",
+      "Tailwind CSS",
+      "Cloudflare Workers"
+    ],
+    "links": {
+      "github": "#",
+      "demo": "https://music-ratings-web.francioxaviersilva.workers.dev/pt"
+    }
+  },
+  {
+    "slug": "projeto-x",
+    "status": "live",
+    "category": "E-commerce / Web App",
+    "title": "Projeto X",
+    "description": "Projeto que visa aumentar a presença online da AXARCA (Associação de Xilogravura e Artesanato do Cariri) por meio da criação de uma plataforma de e-commerce.",
+    "role": "Desenvolvedor Frontend",
+    "preview": "AXA",
+    "architecture": [
+      "CLIENTE (Next.js)",
+      "  │  componentes de UI responsivos",
+      "  ▼",
+      "API E-COMMERCE",
+      "  ├── Serviço de Catálogo  ← Dados de produto",
+      "  └── Fluxo de Checkout    ← Integração de pagamento"
+    ],
+    "features": [
+      "Desenvolvimento completo do frontend do projeto usando Next.js e TypeScript para garantir uma experiência de usuário fluida e de alta performance.",
+      "Implementação de uma plataforma de e-commerce focada em ampliar a visibilidade digital da Associação de Xilogravura e Artesanato do Cariri.",
+      "Criação de componentes reutilizáveis e tipagem estrita para manter a escalabilidade e facilitar a manutenção do código."
+    ],
+    "metrics": [
+      {
+        "value": "Next.js",
+        "label": "Framework Principal"
+      }
+    ],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS"
+    ],
+    "tech": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Lucide Icons"
+    ],
+    "links": {
+      "demo": "#",
+      "github": "#"
+    }
+  },
+  {
+    "slug": "efficiency-program",
+    "status": "live",
+    "category": "GovTech / Gestão",
+    "title": "Programa de Eficiência",
+    "description": "Sistemas de gestão desenvolvidos em parceria com a Prefeitura de Juazeiro do Norte para otimizar a administração pública e os serviços de saúde.",
+    "role": "Desenvolvedor Fullstack",
+    "preview": "EFP",
+    "architecture": [
+      "CLIENTE (Blade / Vue.js)",
+      "  │  renderização server-side",
+      "  ▼",
+      "API LARAVEL (PHP 8.2)",
+      "  ├── Acompanhamento de Mandados Judiciais",
+      "  ├── Serviço de Agendamento de Medicamentos",
+      "  └── Banco de Dados MySQL (Dados do Cidadão)"
+    ],
+    "features": [
+      "Desenvolvimento e manutenção de sistemas de gestão críticos para a Prefeitura de Juazeiro do Norte, com foco em compliance judicial e logística da saúde pública.",
+      "Construção de um sistema robusto de agendamento de medicamentos para gerenciar estoque e atendimento de pacientes, melhorando significativamente o acesso da população a medicamentos essenciais.",
+      "Implementação de um sistema seguro de acompanhamento de mandados judiciais para garantir o cumprimento de prazos legais e a transparência administrativa."
+    ],
+    "metrics": [
+      {
+        "value": "Laravel 10",
+        "label": "Framework Principal"
+      },
+      {
+        "value": "MySQL",
+        "label": "Banco de Dados"
+      },
+      {
+        "value": "Docker",
+        "label": "Deploy"
+      }
+    ],
+    "tags": [
+      "Laravel",
+      "MySQL",
+      "Docker",
+      "PHP"
+    ],
+    "tech": [
+      "Laravel 10",
+      "MySQL",
+      "Docker",
+      "PHP 8.2",
+      "Blade",
+      "Git"
+    ],
+    "links": {
+      "demo": "#",
+      "github": "#"
+    }
+  },
+  {
+    "slug": "web-finance-automation",
+    "status": "live",
+    "category": "FinTech / Automação",
+    "title": "Automação Financeira Web",
+    "description": "API multi-tenant de automação financeira para escritórios de contabilidade, com extração automática de transações a partir de relatórios de caixa em PDF, usando Go e Clean Architecture.",
+    "role": "Desenvolvedor Backend",
+    "preview": "WFA",
+    "architecture": [
+      "APP LAYER (Echo v4 / Use Cases)",
+      "  │  orquestração de comandos/queries",
+      "  ▼",
+      "DOMÍNIO CORE (Entidades / Portas)",
+      "  ├── Registro Multi-Tenant (isolamento por tenant_id)",
+      "  ├── Parser de PDF (regex / extração por posição)",
+      "  └── Regras de Negócio (lógica de Crédito/Débito/Categoria)",
+      "  │",
+      "  ▼",
+      "INFRAESTRUTURA (GORM / Postgres)",
+      "  └── Soft Delete & Persistência Relacional"
+    ],
+    "features": [
+      "Desenho de um sistema multi-tenant robusto onde dados de usuários, clientes, contas bancárias e transações ficam estritamente isolados por tenant ID, garantindo segurança para os clientes do escritório de contabilidade.",
+      "Implementação de um parser de PDF de alta performance em Go para automatizar a extração de transações financeiras dos relatórios de caixa, reduzindo o tempo de digitação manual e marcando os dados extraídos para auditoria.",
+      "Engenharia do backend com Clean Architecture e princípios Hexagonais para garantir alta manutenibilidade, testabilidade e clara separação entre lógica de negócio e frameworks externos como Echo e GORM."
+    ],
+    "metrics": [
+      {
+        "value": "Go 1.25",
+        "label": "Runtime"
+      },
+      {
+        "value": "JWT",
+        "label": "Segurança/Auth"
+      },
+      {
+        "value": "Echo v4",
+        "label": "Framework de API"
+      },
+      {
+        "value": "PDF",
+        "label": "Extração Automática"
+      }
+    ],
+    "tags": [
+      "Go",
+      "PostgreSQL",
+      "Docker"
+    ],
+    "tech": [
+      "Go",
+      "Echo v4",
+      "GORM",
+      "PostgreSQL",
+      "JWT",
+      "Viper",
+      "Docker",
+      "Air (Hot Reload)"
+    ],
+    "links": {
+      "github": "https://github.com/FrancioXavier/web-finnace-automation",
+      "demo": "#"
+    }
+  }
+]

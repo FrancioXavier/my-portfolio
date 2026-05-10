@@ -16,7 +16,7 @@ export function CyberpunkButton({
   disabled,
   ...props 
 }: CyberpunkButtonProps) {
-  const baseClasses = "inline-flex font-mono text-[0.7rem] tracking-[0.14em] uppercase py-3 px-6 transition-all duration-300 clip-btn hover:translate-y-[-2px] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed btn-scanline";
+  const baseClasses = "inline-flex items-center justify-center gap-2 font-mono text-[0.7rem] tracking-[0.14em] uppercase py-3 px-6 transition-all duration-300 clip-btn hover:translate-y-[-2px] hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed btn-scanline";
   
   const variantClasses = variant === 'primary' 
     ? "bg-accent text-bg hover:shadow-[0_0_35px_var(--color-glow-c),_0_0_15px_var(--color-accent)] border border-transparent"

@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "title": "Francio Xavier — Engenheiro de Software",
+    "description": "Portfólio de Francio Xavier — Engenheiro Full-Stack especializado em arquitetura escalável e experiências web modernas."
+  },
+  "skipLink": "PULAR PARA O CONTEÚDO",
+  "nav": {
+    "stacks": "tecnologias",
+    "experience": "experiência",
+    "projects": "projetos",
+    "contact": "contato",
+    "back": {
+      "experience": "← VOLTAR PARA EXPERIÊNCIA",
+      "projects": "← VOLTAR PARA PROJETOS",
+      "home": "← VOLTAR PARA O INÍCIO"
+    },
+    "availableForHire": "DISPONÍVEL PARA CONTRATAÇÃO"
+  },
+  "footer": {
+    "marquee": [
+      "FEITO COM NEXT.JS",
+      "STATIC EXPORT",
+      "DEPLOY NO GITHUB PAGES",
+      "CYBERPUNK DESIGN OS",
+      "ABERTO A OPORTUNIDADES",
+      "RESPONSE_TIME < 24H",
+      "LOCATION ::: BRASIL"
+    ],
+    "navigationHeader": "// NAVEGAÇÃO",
+    "externalLinksHeader": "// EXTERNAL_LINKS",
+    "available": "DISPONÍVEL PARA VAGAS REMOTAS / HÍBRIDAS",
+    "rights": "TODAS AS TRANSMISSÕES ASSINADAS",
+    "nominal": "NOMINAL",
+    "nav": {
+      "stacks": "Tecnologias",
+      "experience": "Experiência",
+      "projects": "Projetos",
+      "contact": "Contato"
+    }
+  },
+  "hero": {
+    "openToOpportunities": "Aberto a oportunidades",
+    "scroll": "ROLE"
+  },
+  "stacks": {
+    "label": "Tech Stack",
+    "title": "ARSENAL",
+    "subtitle": "Ferramentas e tecnologias que uso para construir, implantar e escalar sistemas em produção.",
+    "count": "{categories} CATEGORIAS // {modules} MÓDULOS",
+    "statusReady": "STATUS: READY // {count} MÓDULOS CARREGADOS",
+    "core": "[ SYSTEM_CORE: STABLE ]"
+  },
+  "experience": {
+    "label": "Histórico Profissional",
+    "title": "EXPERIÊNCIA",
+    "subtitle": "Atuações profissionais — clique em qualquer item para ver os detalhes técnicos completos.",
+    "count": "{count} POSIÇÕES REGISTRADAS",
+    "page": {
+      "navBase": "POSIÇÃO",
+      "coreResponsibilities": "PRINCIPAIS RESPONSABILIDADES",
+      "keyAchievements": "PRINCIPAIS CONQUISTAS",
+      "technologiesUsed": "TECNOLOGIAS UTILIZADAS",
+      "positionFallback": "POSIÇÃO"
+    }
+  },
+  "projects": {
+    "label": "Trabalhos Selecionados",
+    "title": "PROJETOS",
+    "subtitle": "Construções de destaque e mergulhos técnicos.",
+    "count": "{count} ARTIFACTS",
+    "wip": "◐ WIP",
+    "live": "● LIVE",
+    "viewProject": "VER PROJETO",
+    "page": {
+      "navBase": "PROJETO",
+      "wipFull": "◐ EM DESENVOLVIMENTO",
+      "liveFull": "● SISTEMA ATIVO",
+      "role": "PAPEL",
+      "launchApp": "ABRIR_APP →",
+      "viewSource": "VER_FONTE",
+      "missionBriefing": "BRIEFING_DA_MISSAO",
+      "systemArchitecture": "ARQUITETURA_DO_SISTEMA",
+      "techStack": "TECH_STACK",
+      "frontend": "Frontend",
+      "backend": "Backend / Infra",
+      "asciiDiagram": "ASCII::DIAGRAMA",
+      "projectFallback": "PROJETO"
+    }
+  },
+  "education": {
+    "label": "Acadêmico",
+    "title": "EDUCAÇÃO",
+    "subtitle": "Formação e aprendizado contínuo.",
+    "count": "{count} REGISTROS",
+    "active": "STATUS: ATIVO"
+  },
+  "contact": {
+    "endOfFile": "END_OF_FILE // 05",
+    "title": "CONECTAR",
+    "subtitle": "Atualmente aberto a novas oportunidades. Seja para tirar uma dúvida ou apenas dizer oi, vou responder o quanto antes.",
+    "externalLinksHeader": "EXTERNAL_LINKS",
+    "labels": {
+      "GH": "SOURCE_CODE_REPO",
+      "LI": "LINKEDIN_STATION",
+      "EM": "EXECUTE: EMAIL"
+    },
+    "panel": {
+      "establishing": "ESTABELECENDO_LINK...",
+      "responseTime": "TEMPO_DE_RESPOSTA:",
+      "responseValue": "< 24H",
+      "location": "LOCALIZACAO:",
+      "locationValue": "REMOTO / BRASIL",
+      "timezone": "FUSO_HORARIO:",
+      "timezoneValue": "UTC-3",
+      "ready": "PRONTO_PARA_HANDSHAKE"
+    },
+    "form": {
+      "header": "FORM // CONECTAR",
+      "secure": "SEGURO",
+      "nameLabel": "[01] NOME_DO_REMETENTE",
+      "namePlaceholder": "INSIRA_O_IDENTIFICADOR",
+      "emailLabel": "[02] EMAIL_DO_REMETENTE",
+      "emailPlaceholder": "INSIRA_O_ENDERECO_CRIPTOGRAFADO",
+      "messageLabel": "[03] DADOS_DA_TRANSMISSAO",
+      "messagePlaceholder": "ESTABELECENDO_PROTOCOLO_DE_COMUNICACAO...",
+      "secureEstablished": "LINHA_SEGURA_ESTABELECIDA",
+      "submit": "EXECUTAR: ENVIAR →",
+      "submitting": "TRANSMITINDO...",
+      "successTitle": "MENSAGEM_TRANSMITIDA",
+      "successDetail": "Sua transmissão foi criptografada e enviada com sucesso. Vou analisar os dados e responder em breve."
+    }
+  },
+  "boot": {
+    "lines": [
+      "INIT_SYSTEM ... OK",
+      "LOADING_MODULES [██████████] 100%",
+      "CONNECTING_TO_MAINFRAME ... ESTABLISHED",
+      "USER_AUTH ... GRANTED",
+      "> BEM-VINDO AO PORTFOLIO_OS"
+    ]
+  },
+  "notFound": {
+    "fault": "SYSTEM_FAULT // 404",
+    "log": "> SCAN_RESULT ............... NO_MATCH\n> URI_LOOKUP ................. FAILED\n> ROUTE_INDEX ................ MISSING\n> RECOVERY_PROTOCOL .......... ENGAGED\n\n> A transmissão que você solicitou não pôde ser localizada no\n> arquivo. A assinatura pode ter sido movida, corrompida ou\n> nunca ter existido.",
+    "returnHome": "VOLTAR_AO_INICIO",
+    "viewProjects": "VER_PROJETOS",
+    "reportIssue": "REPORTAR_PROBLEMA",
+    "suggestion": "SUGESTÃO:"
+  },
+  "breadcrumb": {
+    "home": "INICIO",
+    "projects": "PROJETOS",
+    "experience": "EXPERIENCIA"
+  },
+  "pageNav": {
+    "previous": "ANTERIOR",
+    "next": "PRÓXIMO"
+  },
+  "rootRedirect": {
+    "heading": "Choose a language / Escolha um idioma",
+    "english": "English",
+    "portuguese": "Português"
+  }
+}

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { Link } from "@/i18n/routing";
 
 interface BreadcrumbProps {
   items: { label: string; href?: string }[];
@@ -10,8 +10,8 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
       {items.map((item, index) => (
         <span key={index} className="flex items-center gap-2">
           {item.href ? (
-            <Link 
-              href={item.href} 
+            <Link
+              href={item.href as "/"}
               className="text-accent hover:text-accent-2 transition-colors"
             >
               {item.label}

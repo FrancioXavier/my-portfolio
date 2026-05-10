@@ -1,0 +1,33 @@
+{
+  "name": "FRANCIO_XAVIER",
+  "eyebrow": "Full-Stack Engineer",
+  "role": "> Building systems that solve problems.",
+  "bio": "Full-Stack Engineer focused on scalability and high-performance solutions. I'm a problem-solver at heart with a passion for continuous learning and technical excellence.",
+  "cta": {
+    "primary": {
+      "label": "VIEW EXPERIENCE",
+      "href": "#experience"
+    },
+    "secondary": {
+      "label": "Get in Touch",
+      "href": "#contact"
+    }
+  },
+  "social": [
+    {
+      "icon": "GH",
+      "label": "github.com/FrancioXavier",
+      "href": "https://github.com/FrancioXavier"
+    },
+    {
+      "icon": "LI",
+      "label": "linkedin.com/in/francio-xavier-dev",
+      "href": "https://www.linkedin.com/in/francio-xavier-dev/"
+    },
+    {
+      "icon": "EM",
+      "label": "francioxaviersilva@gmail.com",
+      "href": "mailto:francioxaviersilva@gmail.com"
+    }
+  ]
+}

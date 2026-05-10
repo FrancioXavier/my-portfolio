@@ -20,7 +20,7 @@ export function GlitchText({ text, className = "" }: GlitchTextProps) {
   const scramble = useCallback((targetText: string, speed = 30) => {
     let iteration = 0;
     const interval = setInterval(() => {
-      setDisplayText(prev => 
+      setDisplayText(() => 
         targetText.split("").map((char, index) => {
           if (index < iteration) return targetText[index];
           if (char === " ") return " ";

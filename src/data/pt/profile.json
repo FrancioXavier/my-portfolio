@@ -1,0 +1,33 @@
+{
+  "name": "FRANCIO_XAVIER",
+  "eyebrow": "Engenheiro Full-Stack",
+  "role": "> Construindo sistemas que resolvem problemas.",
+  "bio": "Engenheiro Full-Stack focado em escalabilidade e soluções de alta performance. Sou solucionador de problemas por natureza, com paixão por aprendizado contínuo e excelência técnica.",
+  "cta": {
+    "primary": {
+      "label": "VER EXPERIÊNCIA",
+      "href": "#experience"
+    },
+    "secondary": {
+      "label": "Entrar em Contato",
+      "href": "#contact"
+    }
+  },
+  "social": [
+    {
+      "icon": "GH",
+      "label": "github.com/FrancioXavier",
+      "href": "https://github.com/FrancioXavier"
+    },
+    {
+      "icon": "LI",
+      "label": "linkedin.com/in/francio-xavier-dev",
+      "href": "https://www.linkedin.com/in/francio-xavier-dev/"
+    },
+    {
+      "icon": "EM",
+      "label": "francioxaviersilva@gmail.com",
+      "href": "mailto:francioxaviersilva@gmail.com"
+    }
+  ]
+}

@@ -1,18 +1,30 @@
-import { SectionHeader } from '@/components/layout/SectionHeader';
-import { ExperienceCard } from '@/components/cards/ExperienceCard';
-import { ScrollReveal } from '@/components/effects/ScrollReveal';
-import experiencesData from '@/data/experiences.json';
+import { getTranslations, getLocale } from "next-intl/server";
+import { SectionHeader } from "@/components/layout/SectionHeader";
+import { ExperienceCard } from "@/components/cards/ExperienceCard";
+import { ScrollReveal } from "@/components/effects/ScrollReveal";
+import { getExperiences } from "@/data";
+import type { Locale } from "@/i18n/routing";
 
-export function ExperienceSection() {
+export async function ExperienceSection() {
+  const locale = (await getLocale()) as Locale;
+  const experiencesData = getExperiences(locale);
+  const t = await getTranslations({ locale, namespace: "experience" });
+
   return (
-    <section id="experience" className="py-[calc(80px+4rem)] pb-[5rem] overflow-x-hidden">
+    <section
+      id="experience"
+      className="py-[calc(80px+4rem)] pb-[5rem] overflow-x-hidden"
+    >
       <div className="max-w-[1320px] mx-auto px-[clamp(1.25rem,5vw,4rem)] w-full">
         <ScrollReveal>
-          <SectionHeader 
-            number="02" 
-            label="Work History" 
-            title="EXPERIENCE" 
-            subtitle="Professional roles — click any entry for the full technical breakdown." 
+          <SectionHeader
+            number="02"
+            label={t("label")}
+            title={t("title")}
+            subtitle={t("subtitle")}
+            count={t("count", {
+              count: String(experiencesData.length).padStart(2, "0"),
+            })}
           />
         </ScrollReveal>
 
