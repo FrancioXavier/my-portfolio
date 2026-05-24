@@ -2,6 +2,7 @@
   {
     "slug": "discnotes",
     "status": "wip",
+    "featured": true,
     "category": "Produto / SaaS",
     "title": "Discnotes",
     "description": "Descubra música através das opiniões da comunidade, com base em reviews, rankings e listas criados por usuários para usuários.",

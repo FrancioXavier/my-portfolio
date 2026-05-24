@@ -14,7 +14,7 @@
       "projects": "← VOLTAR PARA PROJETOS",
       "home": "← VOLTAR PARA O INÍCIO"
     },
-    "availableForHire": "DISPONÍVEL PARA CONTRATAÇÃO"
+    "availableForHire": "ONLINE"
   },
   "footer": {
     "marquee": [
@@ -22,13 +22,13 @@
       "STATIC EXPORT",
       "DEPLOY NO GITHUB PAGES",
       "CYBERPUNK DESIGN OS",
-      "ABERTO A OPORTUNIDADES",
+      "FREELANCER",
       "RESPONSE_TIME < 24H",
       "LOCATION ::: BRASIL"
     ],
     "navigationHeader": "// NAVEGAÇÃO",
     "externalLinksHeader": "// EXTERNAL_LINKS",
-    "available": "DISPONÍVEL PARA VAGAS REMOTAS / HÍBRIDAS",
+    "available": "ONLINE",
     "rights": "TODAS AS TRANSMISSÕES ASSINADAS",
     "nominal": "NOMINAL",
     "nav": {
@@ -39,8 +39,45 @@
     }
   },
   "hero": {
-    "openToOpportunities": "Aberto a oportunidades",
-    "scroll": "ROLE"
+    "openToOpportunities": "ONLINE",
+    "scroll": "ROLE",
+    "sessionTag": "PORTFOLIO_OS // SESSAO_INICIADA",
+    "terminal": {
+      "title": "francio@portfolio_os — zsh",
+      "user": "francio",
+      "host": "portfolio_os",
+      "sequence": [
+        {
+          "cmd": "whoami",
+          "out": [
+            "francio_xavier  ·  engenheiro full-stack"
+          ]
+        },
+        {
+          "cmd": "cat sobre.md",
+          "out": [
+            "Construindo sistemas que resolvem problemas reais.",
+            "Foco: escalabilidade + alta performance.",
+            "Solucionador de problemas. Aprendiz contínuo."
+          ]
+        },
+        {
+          "cmd": "ls --stack",
+          "out": [
+            "php   go        laravel      react",
+            "postgres     redis     docker     agentic-ai-development"
+          ]
+        },
+        {
+          "cmd": "status --me",
+          "out": [
+            "[●]  ONLINE",
+            "loc: brasil  ·  utc-3  ·  remoto",
+            "ret: < 24h"
+          ]
+        }
+      ]
+    }
   },
   "stacks": {
     "label": "Tech Stack",
@@ -48,13 +85,29 @@
     "subtitle": "Ferramentas e tecnologias que uso para construir, implantar e escalar sistemas em produção.",
     "count": "{categories} CATEGORIAS // {modules} MÓDULOS",
     "statusReady": "STATUS: READY // {count} MÓDULOS CARREGADOS",
-    "core": "[ SYSTEM_CORE: STABLE ]"
+    "core": "[ SYSTEM_CORE: STABLE ]",
+    "viewMode": "MODO_VISUALIZACAO",
+    "viewCategory": "POR CATEGORIA",
+    "viewExperience": "POR EXPERIENCIA",
+    "sortedByExperience": "ORDENADO POR ANOS DE EXPERIENCIA",
+    "modules": "{count} MODULOS",
+    "aggregate": "EXPERIENCIA_AGREGADA :: {years} ANOS",
+    "inspectTip": "clique em qualquer módulo para inspecionar",
+    "tierCore": "core",
+    "tierStrong": "forte",
+    "tierFamiliar": "familiar",
+    "fieldYears": "Experiência",
+    "fieldCategory": "Categoria",
+    "fieldTier": "Nível",
+    "yearsSuffix": "anos",
+    "listUseCases": "USOS_COMUNS"
   },
   "experience": {
     "label": "Histórico Profissional",
     "title": "EXPERIÊNCIA",
     "subtitle": "Atuações profissionais — clique em qualquer item para ver os detalhes técnicos completos.",
     "count": "{count} POSIÇÕES REGISTRADAS",
+    "seeDetails": "VER_DETALHES",
     "page": {
       "navBase": "POSIÇÃO",
       "coreResponsibilities": "PRINCIPAIS RESPONSABILIDADES",
@@ -71,6 +124,12 @@
     "wip": "◐ WIP",
     "live": "● LIVE",
     "viewProject": "VER PROJETO",
+    "featuredLabel": "DESTAQUE",
+    "featuredViewDetails": "VER_DETALHES",
+    "featuredStack": "stack",
+    "featuredTerminalTitle": "~/projetos/destaque — zsh",
+    "archiveTag": "ARQUIVO",
+    "archiveHeader": "OUTROS PROJETOS",
     "page": {
       "navBase": "PROJETO",
       "wipFull": "◐ EM DESENVOLVIMENTO",
@@ -87,17 +146,65 @@
       "projectFallback": "PROJETO"
     }
   },
+  "about": {
+    "label": "Sobre",
+    "title": "PERFIL_DO_OPERADOR",
+    "subtitle": "Três perspectivas sobre o mesmo humano executando este sistema.",
+    "dossier": {
+      "marker": "DOSSIE_01 :: ARQUIVO_PESSOAL",
+      "idBadge": "CRACHA",
+      "clearance": "CLEARANCE",
+      "callsignLabel": "CODINOME",
+      "roleLabel": "FUNCAO",
+      "locLabel": "LOC",
+      "section01": "[01] PERFIL // RESUMO",
+      "section02": "[02] ANOMALIAS // CURIOSIDADES",
+      "section03": "[03] AUXILIAR // SUPLEMENTAR",
+      "signedBy": "// assinado: francio@portfolio_os",
+      "barcode": "CODIGO_BARRAS",
+      "scanCorner": "SCAN_OK"
+    },
+    "terminal": {
+      "marker": "MANIFESTO_02 :: cat ~/.identity",
+      "title": "francio@portfolio_os: ~/about",
+      "tab1": "~/about.md",
+      "tab2": "~/curiosities.log",
+      "tab3": "~/etc/notes.cfg",
+      "cmd1": "$ cat about.md",
+      "cmd2": "$ tail -n 20 curiosities.log",
+      "cmd3": "$ env | grep -i operator",
+      "promptDone": "READ_ONLY",
+      "lines": "LINHAS",
+      "encoding": "UTF-8",
+      "metadataHeader": "// METADADOS",
+      "portraitCaption": "avatar.png"
+    },
+    "orbit": {
+      "marker": "VIEWPORT_03 :: HUD_OPERADOR",
+      "reticle": "RETICULA_TRAVADA",
+      "operator": "OPERADOR // BIO",
+      "anomaly": "LOG_ANOMALIAS // PINGS",
+      "telemetry": "TELEMETRIA // STATS",
+      "signal": "SINAL",
+      "ping": "PING",
+      "azimuth": "AZ"
+    }
+  },
   "education": {
     "label": "Acadêmico",
     "title": "EDUCAÇÃO",
     "subtitle": "Formação e aprendizado contínuo.",
     "count": "{count} REGISTROS",
-    "active": "STATUS: ATIVO"
+    "active": "STATUS: ATIVO",
+    "inspectTip": "clique em qualquer registro para inspecionar",
+    "fieldPeriod": "Período",
+    "fieldFocus": "Foco",
+    "listCoursework": "DISCIPLINAS"
   },
   "contact": {
     "endOfFile": "END_OF_FILE // 05",
     "title": "CONECTAR",
-    "subtitle": "Atualmente aberto a novas oportunidades. Seja para tirar uma dúvida ou apenas dizer oi, vou responder o quanto antes.",
+    "subtitle": "Atualmente aberto a novas oportunidades como freelancer. Seja para tirar uma dúvida ou apenas dizer oi, vou responder o quanto antes.",
     "externalLinksHeader": "EXTERNAL_LINKS",
     "labels": {
       "GH": "SOURCE_CODE_REPO",
@@ -129,6 +236,14 @@
       "successTitle": "MENSAGEM_TRANSMITIDA",
       "successDetail": "Sua transmissão foi criptografada e enviada com sucesso. Vou analisar os dados e responder em breve."
     }
+  },
+  "inspect": {
+    "ariaInspect": "Inspecionar",
+    "descriptionHeading": "DESCRICAO",
+    "closeHint": "para fechar",
+    "closeButton": "FECHAR",
+    "terminalSuffix": "zsh",
+    "statCommand": "stat"
   },
   "boot": {
     "lines": [

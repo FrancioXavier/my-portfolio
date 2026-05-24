@@ -4,12 +4,12 @@ interface SectionHeaderProps {
   title: string;
   subtitle: string;
   count?: string;
+  tip?: React.ReactNode;
 }
 
-export function SectionHeader({ number, label, title, subtitle, count }: SectionHeaderProps) {
+export function SectionHeader({ number, label, title, subtitle, count, tip }: SectionHeaderProps) {
   return (
     <div className="mb-14 relative">
-      {/* Corner brackets */}
       <div className="absolute -left-1 -top-1 w-3 h-3 border-l border-t border-accent/60" aria-hidden="true" />
       <div className="absolute -left-1 top-[40px] w-3 h-3 border-l border-b border-accent/60" aria-hidden="true" />
 
@@ -37,6 +37,8 @@ export function SectionHeader({ number, label, title, subtitle, count }: Section
       <p className="text-muted font-body text-[0.95rem] max-w-[600px] leading-relaxed pl-4">
         {subtitle}
       </p>
+
+      {tip && <div className="pl-4">{tip}</div>}
     </div>
   );
 }

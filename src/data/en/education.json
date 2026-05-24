@@ -2,6 +2,24 @@
   {
     "degree": "Computer Science",
     "school": "// Federal University of Cariri",
-    "period": "2022 — Present"
+    "period": "2022 — Present",
+    "description": "Undergraduate program covering algorithms, data structures, systems, and software engineering fundamentals.",
+    "status": "ACTIVE",
+    "focus": "Software Engineering · Backend Systems · Algorithms",
+    "coursework": [
+      "Algorithms & Data Structures",
+      "Algorithm Construction & Analysis",
+      "Advanced Topics in Algorithms",
+      "Graph Algorithms",
+      "Operating Systems",
+      "Databases",
+      "Distributed Systems",
+      "Software Engineering",
+      "Calculus I",
+      "Calculus II",
+      "Numerical Calculus",
+      "Linear Algebra",
+      "Discrete Mathematics"
+    ]
   }
 ]

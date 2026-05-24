@@ -45,6 +45,7 @@ export interface Experience {
 export interface Project {
   slug: string;
   status: 'live' | 'wip';
+  featured?: boolean;
   title: string;
   category: string;
   preview: string;
@@ -62,9 +63,36 @@ export interface Project {
   };
 }
 
+export interface AboutCuriosity {
+  tag: string;
+  text: string;
+}
+
+export interface AboutSupplemental {
+  label: string;
+  value: string;
+}
+
+export interface About {
+  callsign: string;
+  role: string;
+  id: string;
+  location: string;
+  clearance: string;
+  photo: string;
+  photoAlt: string;
+  summary: string[];
+  curiosities: AboutCuriosity[];
+  supplemental: AboutSupplemental[];
+}
+
 export interface Education {
   degree: string;
   school: string;
   period: string;
   accentColor?: string;
+  description?: string;
+  status?: string;
+  focus?: string;
+  coursework?: string[];
 }

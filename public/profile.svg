@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Operator portrait placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="oklch(15% 0.05 235)"/>
+      <stop offset="1" stop-color="oklch(8% 0.04 280)"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="oklch(28% 0.05 225)" stroke-width="0.5"/>
+    </pattern>
+    <radialGradient id="halo" cx="50%" cy="40%" r="55%">
+      <stop offset="0" stop-color="oklch(82% 0.22 195 / 0.30)"/>
+      <stop offset="1" stop-color="oklch(82% 0.22 195 / 0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <rect width="400" height="400" fill="url(#grid)"/>
+  <rect width="400" height="400" fill="url(#halo)"/>
+
+  <!-- silhouette -->
+  <g fill="none" stroke="oklch(82% 0.22 195)" stroke-width="2.2" stroke-linecap="round">
+    <circle cx="200" cy="160" r="58"/>
+    <path d="M 105 330 C 105 250, 295 250, 295 330 L 295 400 L 105 400 Z"/>
+    <line x1="178" y1="212" x2="178" y2="248"/>
+    <line x1="222" y1="212" x2="222" y2="248"/>
+    <path d="M 165 155 q 12 -10 24 0" stroke="oklch(68% 0.28 320)"/>
+    <path d="M 211 155 q 12 -10 24 0" stroke="oklch(68% 0.28 320)"/>
+  </g>
+
+  <!-- crosshair corners -->
+  <g stroke="oklch(68% 0.28 320)" stroke-width="1.5" opacity="0.75" fill="none">
+    <path d="M 30 30 H 60 M 30 30 V 60"/>
+    <path d="M 370 30 H 340 M 370 30 V 60"/>
+    <path d="M 30 370 H 60 M 30 370 V 340"/>
+    <path d="M 370 370 H 340 M 370 370 V 340"/>
+  </g>
+
+  <!-- scan lines -->
+  <g opacity="0.06" fill="oklch(82% 0.22 195)">
+    <rect y="0" width="400" height="2"/>
+    <rect y="80" width="400" height="2"/>
+    <rect y="160" width="400" height="2"/>
+    <rect y="240" width="400" height="2"/>
+    <rect y="320" width="400" height="2"/>
+  </g>
+
+  <text x="20" y="392" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(82% 0.22 195)" opacity="0.7" letter-spacing="2">ID::0x4A7F</text>
+  <text x="316" y="392" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(68% 0.28 320)" opacity="0.7" letter-spacing="2">SCAN_OK</text>
+</svg>

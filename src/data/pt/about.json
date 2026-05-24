@@ -1,0 +1,69 @@
+{
+  "callsign": "FRANCIO_XAVIER",
+  "role": "ENGENHEIRO FULL-STACK",
+  "id": "0x4A7F-PORTFOLIO_OS",
+  "location": "BRASIL // UTC-3",
+  "clearance": "FREELANCER",
+  "photo": "/profile.jpg",
+  "photoAlt": "Retrato do operador Francio Xavier",
+  "summary": [
+    "Comecei a estudar desenvolvimento em 2022 e trabalhar na área em 2023. Desde então, nunca parei de estudar e entender como resolver problemas e construir software desde a arquitetura até a entrega do produto em produção. Hoje, possi dizer que tenho experiência em todas as fases do desenvolvimento de software.",
+    "Sou muito curioso e gosto de aprender coisas novas. Também gosto de trabalhar em equipe e me adaptar a novos ambientes. Gosto de trabalhar com pessoas que me desafiam e que me ajudam a crescer profissionalmente."
+  ],
+  "curiosities": [
+    {
+      "tag": "ORIGEM",
+      "text": "Meu primeiro contato foi com visualg, minha primeira linguagem foi Python, mas minha stack principal hoje é PHP e Go."
+    },
+    {
+      "tag": "RITUAL",
+      "text": "Entender requisito -> Planejar -> documentar -> implementar -> testar -> ajustar -> repetir."
+    },
+    {
+      "tag": "QUEST",
+      "text": "Minha principal expertise é com back-end, mas gosto muito de resolver tasks de DevOps e segurança."
+    },
+    {
+      "tag": "HABITO",
+      "text": "Sempre documento o que eu implemento e gosto de anotar requisitos no caderno."
+    },
+    {
+      "tag": "MANIA",
+      "text": "Faz speed-run em documentação. Nunca terminou um tutorial na vida."
+    }
+  ],
+  "supplemental": [
+    {
+      "label": "FUSO",
+      "value": "UTC-3 (BRT)"
+    },
+    {
+      "label": "STATUS",
+      "value": "FREELANCER // REMOTO"
+    },
+    {
+      "label": "TEMPO_RESPOSTA",
+      "value": "< 24H"
+    },
+    {
+      "label": "STACK_FAVORITA",
+      "value": "TS · GO · POSTGRES"
+    },
+    {
+      "label": "LIVRO_FAVORITO",
+      "value": "Devoradores de Estrelas"
+    },
+    {
+      "label": "ALGORITMO_FAVORITO",
+      "value": "Algoritmos de Divisão e Conquista"
+    },
+    {
+      "label": "EDITOR",
+      "value": "VSCODE / ANTIGRAVITY / TERMINAL(FISH)"
+    },
+    {
+      "label": "FORA_DE_SERVICO",
+      "value": "JOGOS / VÔLEI / BASQUETE"
+    }
+  ]
+}

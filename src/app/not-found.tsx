@@ -3,7 +3,9 @@ import { CyberpunkButton } from '@/components/ui/CyberpunkButton';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[100svh] pt-[120px] pb-20 px-[clamp(1.25rem,5vw,4rem)] flex items-center">
+    <html lang="en">
+      <body className="antialiased bg-bg text-fg selection:bg-accent/30 selection:text-accent-2">
+        <div className="min-h-[100svh] pt-[120px] pb-20 px-[clamp(1.25rem,5vw,4rem)] flex items-center">
       <div className="max-w-[820px] mx-auto w-full">
         <div className="font-mono text-[0.66rem] tracking-[0.32em] uppercase text-accent-2 mb-6 flex items-center gap-3 drop-shadow-[0_0_10px_var(--color-glow-m)]">
           <span className="w-2 h-2 bg-accent-2 animate-status-pulse rounded-full" />
@@ -50,6 +52,8 @@ export default function NotFound() {
           </Link>
         </div>
       </div>
-    </div>
+        </div>
+      </body>
+    </html>
   );
 }

@@ -1,0 +1,69 @@
+{
+  "callsign": "FRANCIO_XAVIER",
+  "role": "FULL-STACK ENGINEER",
+  "id": "0x4A7F-PORTFOLIO_OS",
+  "location": "BRAZIL // UTC-3",
+  "clearance": "FREELANCER",
+  "photo": "/profile.jpg",
+  "photoAlt": "Operator portrait of Francio Xavier",
+  "summary": [
+    "I started studying development in 2022 and working in the field in 2023. Since then, I have never stopped learning and understanding how to solve problems and build software — from architecture all the way to shipping to production. Today, I can confidently say I have experience across all phases of software development.",
+    "I am very curious and enjoy learning new things. I also like working in teams and adapting to new environments. I enjoy working with people who challenge me and help me grow professionally."
+  ],
+  "curiosities": [
+    {
+      "tag": "ORIGIN",
+      "text": "My first contact was with Visualg, my first language was Python, but my main stack today is PHP and Go."
+    },
+    {
+      "tag": "RITUAL",
+      "text": "Understand requirements → Plan → Document → Implement → Test → Adjust → Repeat."
+    },
+    {
+      "tag": "QUEST",
+      "text": "My main expertise is backend, but I really enjoy working on DevOps and security tasks."
+    },
+    {
+      "tag": "HABIT",
+      "text": "I always document what I implement and like to write down requirements in a notebook."
+    },
+    {
+      "tag": "QUIRK",
+      "text": "Speed-runs documentation. Has never finished a tutorial in their life."
+    }
+  ],
+  "supplemental": [
+    {
+      "label": "TIMEZONE",
+      "value": "UTC-3 (BRT)"
+    },
+    {
+      "label": "STATUS",
+      "value": "FREELANCER // REMOTE"
+    },
+    {
+      "label": "RESPONSE_TIME",
+      "value": "< 24H"
+    },
+    {
+      "label": "FAVORITE_STACK",
+      "value": "TS · GO · POSTGRES"
+    },
+    {
+      "label": "FAVORITE_BOOK",
+      "value": "Devoradores de Estrelas"
+    },
+    {
+      "label": "FAVORITE_ALGORITHM",
+      "value": "Divide and Conquer Algorithms"
+    },
+    {
+      "label": "EDITOR_OF_CHOICE",
+      "value": "VSCODE / ANTIGRAVITY / TERMINAL(FISH)"
+    },
+    {
+      "label": "OFF_DUTY",
+      "value": "GAMES / VOLLEYBALL / BASKETBALL"
+    }
+  ]
+}

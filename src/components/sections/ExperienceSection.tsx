@@ -29,9 +29,13 @@ export async function ExperienceSection() {
         </ScrollReveal>
 
         <div className="flex flex-col gap-6 relative before:content-[''] before:absolute before:left-8 before:top-4 before:bottom-4 before:w-[1px] before:bg-border before:-z-10 md:before:hidden">
-          {experiencesData.map((experience) => (
-            <ScrollReveal key={experience.slug}>
-              <ExperienceCard experience={experience} />
+          {experiencesData.map((experience, index) => (
+            <ScrollReveal key={experience.slug} delay={index * 0.05}>
+              <ExperienceCard
+                experience={experience}
+                index={index}
+                seeDetailsLabel={t("seeDetails")}
+              />
             </ScrollReveal>
           ))}
         </div>

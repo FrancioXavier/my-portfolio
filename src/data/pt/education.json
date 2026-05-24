@@ -2,6 +2,24 @@
   {
     "degree": "Ciência da Computação",
     "school": "// Universidade Federal do Cariri",
-    "period": "2022 — Atual"
+    "period": "2022 — Atual",
+    "description": "Curso de graduação cobrindo algoritmos, estruturas de dados, sistemas e fundamentos de engenharia de software.",
+    "status": "ATIVO",
+    "focus": "Engenharia de Software · Sistemas Backend · Algoritmos",
+    "coursework": [
+      "Algoritmos & Estruturas de Dados",
+      "Construção e Análise de Algoritmos",
+      "Tópicos Avançados em Algoritmos",
+      "Algoritmos em Grafos",
+      "Sistemas Operacionais",
+      "Bancos de Dados",
+      "Sistemas Distribuídos",
+      "Engenharia de Software",
+      "Cálculo I",
+      "Cálculo II",
+      "Cálculo Numérico",
+      "Álgebra Linear",
+      "Matemática Discreta"
+    ]
   }
 ]

@@ -2,6 +2,7 @@
   {
     "slug": "discnotes",
     "status": "wip",
+    "featured": true,
     "category": "Product / SaaS",
     "title": "Discnotes",
     "description": "Discover music through community opinions based on reviews, rankings, and lists created by users for users.",
@@ -69,7 +70,7 @@
     ],
     "links": {
       "github": "#",
-      "demo": "https://music-ratings-web.francioxaviersilva.workers.dev/pt"
+      "demo": "https://discnotes.app"
     }
   },
   {

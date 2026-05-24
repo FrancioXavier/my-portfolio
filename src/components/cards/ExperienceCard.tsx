@@ -2,56 +2,78 @@ import { Link } from "@/i18n/routing";
 import { TagChip } from "@/components/ui/TagChip";
 import { Experience } from "@/types/content";
 
-export function ExperienceCard({ experience }: { experience: Experience }) {
+interface ExperienceCardProps {
+  experience: Experience;
+  index: number;
+  seeDetailsLabel: string;
+}
+
+export function ExperienceCard({
+  experience,
+  index,
+  seeDetailsLabel,
+}: ExperienceCardProps) {
+  const positionTag = (index + 1).toString().padStart(2, "0");
+
   return (
     <Link
       href={`/experience/${experience.slug}` as `/experience/${string}`}
-      className="block border border-border bg-surface-2 p-6 md:p-8 clip-card transition-all duration-300 group hover:-translate-y-1 hover:border-accent hover:shadow-[0_10px_30px_var(--color-glow-c)] relative overflow-hidden"
+      aria-label={`${experience.role} — ${experience.company}. ${seeDetailsLabel}`}
+      className="block border border-border bg-surface-2 px-6 md:px-9 py-7 md:py-9 clip-card transition-all duration-300 group hover:-translate-y-1 hover:border-accent hover:shadow-[0_18px_45px_-15px_var(--color-glow-c)] relative overflow-hidden"
     >
-      {/* Vertical accent rail (left edge) */}
       <span
-        aria-hidden="true"
-        className="absolute left-0 top-4 bottom-4 w-[2px] bg-gradient-to-b from-accent/60 via-accent-2/40 to-transparent opacity-50 group-hover:opacity-100 group-hover:w-[3px] transition-all duration-300"
+        aria-hidden
+        className="absolute left-0 top-5 bottom-5 w-[2px] bg-gradient-to-b from-accent/60 via-accent-2/40 to-transparent opacity-50 group-hover:opacity-100 group-hover:w-[3px] transition-all duration-300"
       />
 
-      {/* Index marker */}
       <span
-        aria-hidden="true"
-        className="absolute -top-px left-6 font-mono text-[0.55rem] tracking-[0.22em] text-muted/50 px-2 py-0.5 bg-bg border border-border/60 group-hover:text-accent group-hover:border-accent/40 transition-colors"
+        aria-hidden
+        className="absolute -top-px left-6 md:left-9 inline-flex items-center gap-2 font-mono text-[0.72rem] tracking-[0.22em] uppercase text-muted/70 px-2.5 py-1 bg-bg border border-border/60 group-hover:text-accent group-hover:border-accent/50 transition-colors"
       >
-        {experience.eyebrow || "ROLE"}
+        <span className="text-accent-2/70 group-hover:text-accent-2 transition-colors">
+          [{positionTag}]
+        </span>
+        <span className="text-border/80">/</span>
+        <span>{experience.eyebrow || "ROLE"}</span>
       </span>
 
-      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 gap-2 mt-3">
-        <div>
-          <div className="font-mono text-lg text-fg tracking-[0.05em] mb-1 group-hover:text-accent transition-colors">
+      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-5 gap-3 mt-5">
+        <div className="min-w-0">
+          <div className="font-mono text-[clamp(1.35rem,1.9vw,1.65rem)] leading-[1.2] text-fg tracking-[0.02em] mb-2 group-hover:text-accent transition-colors">
             {experience.role}
           </div>
-          <div className="font-mono text-[0.8rem] text-accent tracking-[0.08em]">
-            <span className="text-border">{"//"}</span> {experience.company}
+          <div className="font-mono text-[1rem] text-accent tracking-[0.04em]">
+            <span className="text-border/70 mr-1">{"//"}</span>
+            {experience.company}
           </div>
         </div>
-        <div className="font-mono text-[0.7rem] text-muted tracking-[0.1em] mt-1 md:mt-0 flex items-center gap-2">
+        <div className="font-mono text-[0.88rem] text-fg/85 tracking-[0.08em] mt-1 md:mt-2 inline-flex items-center gap-2.5 self-start md:self-auto py-1.5 px-3 border border-border/60 bg-bg/60 clip-chip">
           <span
-            className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover:bg-accent transition-colors"
-            aria-hidden="true"
+            aria-hidden
+            className="w-1.5 h-1.5 rounded-full bg-accent/50 group-hover:bg-accent group-hover:shadow-[0_0_8px_var(--color-glow-c)] transition-all"
           />
           {experience.period}
         </div>
       </div>
 
-      <p className="font-body text-muted text-[0.9rem] leading-[1.6] mb-5 max-w-[800px]">
+      <p className="font-body text-fg/75 text-[1rem] md:text-[1.05rem] leading-[1.65] mb-6 max-w-[860px]">
         {experience.description}
       </p>
 
-      <div className="flex flex-wrap gap-2 mb-2">
+      <div className="flex flex-wrap items-center gap-2 mb-2 pr-0 md:pr-[180px]">
         {experience.tags.map((tag) => (
           <TagChip key={tag}>{tag}</TagChip>
         ))}
       </div>
 
-      <div className="absolute right-6 bottom-6 md:right-8 md:bottom-8 font-mono text-xl text-border transition-all duration-300 group-hover:text-accent group-hover:translate-x-1">
-        →
+      <div className="mt-6 md:mt-0 md:absolute md:right-7 md:bottom-7 inline-flex items-center gap-2 font-mono text-[0.78rem] tracking-[0.22em] uppercase py-2 px-3.5 border border-border/70 text-muted bg-bg/40 clip-btn group-hover:text-bg group-hover:bg-accent group-hover:border-accent group-hover:shadow-[0_0_22px_var(--color-glow-c)] transition-all duration-300">
+        <span>{seeDetailsLabel}</span>
+        <span
+          aria-hidden
+          className="inline-block transition-transform duration-300 group-hover:translate-x-1"
+        >
+          →
+        </span>
       </div>
     </Link>
   );

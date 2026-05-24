@@ -3,49 +3,231 @@
     "id": "backend",
     "label": "Backend / Server",
     "items": [
-      { "name": "PHP", "icon": "php" },
-      { "name": "Laravel", "icon": "laravel" },
-      { "name": "Golang", "icon": "go" }
+      {
+        "name": "PHP",
+        "icon": "php",
+        "years": 3,
+        "description": "Server-side scripting language powering web applications and APIs.",
+        "useCases": [
+          "Legacy system maintenance",
+          "Server-rendered web apps"
+        ]
+      },
+      {
+        "name": "Laravel",
+        "icon": "laravel",
+        "years": 3,
+        "description": "PHP web framework with elegant syntax for building robust APIs and full-stack apps.",
+        "useCases": [
+          "REST APIs",
+          "Admin dashboards",
+          "Multi-tenant SaaS"
+        ]
+      },
+      {
+        "name": "Golang",
+        "icon": "go",
+        "years": 2,
+        "description": "Statically-typed compiled language built for concurrent, high-performance backends.",
+        "useCases": [
+          "Microservices",
+          "PDF parsing & data extraction",
+          "High-throughput APIs"
+        ]
+      }
     ]
   },
   {
     "id": "frontend",
     "label": "Frontend",
     "items": [
-      { "name": "Next.js", "icon": "nextdotjs" },
-      { "name": "Vue.js", "icon": "vuedotjs" },
-      { "name": "TypeScript", "icon": "typescript" },
-      { "name": "Tailwind", "icon": "tailwindcss" }
+      {
+        "name": "Next.js",
+        "icon": "nextdotjs",
+        "years": 3,
+        "description": "React framework with hybrid rendering, server actions, and edge runtime support.",
+        "useCases": [
+          "SSR institutional sites",
+          "Landing pages",
+          "Application front-end"
+        ]
+      },
+      {
+        "name": "Vue.js",
+        "icon": "vuedotjs",
+        "years": 1,
+        "description": "Progressive frontend framework with reactive composition and single-file components.",
+        "useCases": [
+          "Application front-end"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript",
+        "years": 3,
+        "description": "Statically-typed superset of JavaScript that catches errors at compile time.",
+        "useCases": [
+          "Typed React apps",
+          "Node.js backend (Nest and Express)"
+        ]
+      },
+      {
+        "name": "Tailwind",
+        "icon": "tailwindcss",
+        "years": 3,
+        "description": "Utility-first CSS framework for rapidly building custom user interfaces.",
+        "useCases": [
+          "Design systems",
+          "Marketing pages"
+        ]
+      }
     ]
   },
   {
     "id": "data",
     "label": "Data",
     "items": [
-      { "name": "PostgreSQL", "icon": "postgresql" },
-      { "name": "MySQL", "icon": "mysql" },
-      { "name": "Redis", "icon": "redis" },
-      { "name": "MongoDB", "icon": "mongodb" }
+      {
+        "name": "PostgreSQL",
+        "icon": "postgresql",
+        "years": 3,
+        "description": "Open-source relational database with strong consistency and rich SQL features.",
+        "useCases": [
+          "Transactional workloads",
+          "Multi-tenant schemas",
+          "JSON-hybrid queries"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "icon": "mysql",
+        "years": 4,
+        "description": "Widely-deployed relational database for transactional web applications.",
+        "useCases": [
+          "Legacy CRUD systems",
+          "E-commerce",
+          "Public-sector platforms"
+        ]
+      },
+      {
+        "name": "Redis",
+        "icon": "redis",
+        "years": 2,
+        "description": "In-memory data store used for caching, pub/sub, and ephemeral state.",
+        "useCases": [
+          "SWR caching",
+          "Rate limiting",
+          "Session stores"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "icon": "mongodb",
+        "years": 3,
+        "description": "Document-oriented NoSQL database for flexible, schema-less data models.",
+        "useCases": [
+          "Event logs",
+          "Content catalogs"
+        ]
+      }
     ]
   },
   {
     "id": "infrastructure",
     "label": "Infrastructure",
     "items": [
-      { "name": "AWS", "icon": "amazonwebservices" },
-      { "name": "GCP", "icon": "googlecloud" },
-      { "name": "Cloudflare", "icon": "cloudflare" },
-      { "name": "Docker", "icon": "docker" },
-      { "name": "Linux", "icon": "linux" },
-      { "name": "Github Actions", "icon": "github" }
+      {
+        "name": "AWS",
+        "icon": "amazonwebservices",
+        "years": 1,
+        "description": "Cloud platform for compute, storage, networking, and managed services.",
+        "useCases": [
+          "EC2 deployments",
+          "S3 storage",
+          "RDS managed databases"
+        ]
+      },
+      {
+        "name": "GCP",
+        "icon": "googlecloud",
+        "years": 2,
+        "description": "Google Cloud Platform — compute, data, and AI services with strong networking.",
+        "useCases": [
+          "Cloud Run services",
+          "Artifact Registry"
+        ]
+      },
+      {
+        "name": "Cloudflare",
+        "icon": "cloudflare",
+        "years": 2,
+        "description": "Edge platform for CDN, Workers, R2 storage, and DNS at the network boundary.",
+        "useCases": [
+          "Worker-based APIs",
+          "R2 object storage",
+          "CDN-fronted apps"
+        ]
+      },
+      {
+        "name": "Docker",
+        "icon": "docker",
+        "years": 3,
+        "description": "Container runtime for packaging applications with reproducible environments.",
+        "useCases": [
+          "Local dev environments",
+          "Reproducible CI builds",
+          "Production deployments"
+        ]
+      },
+      {
+        "name": "Linux",
+        "icon": "linux",
+        "years": 2,
+        "description": "Open-source operating system kernel powering most servers and dev environments.",
+        "useCases": [
+          "Daily driver",
+          "Server administration",
+          "Shell scripting"
+        ]
+      },
+      {
+        "name": "Github Actions",
+        "icon": "github",
+        "years": 3,
+        "description": "CI/CD automation tied to GitHub repositories.",
+        "useCases": [
+          "Build and test pipelines",
+          "Container image publishing",
+          "Scheduled jobs"
+        ]
+      }
     ]
   },
   {
     "id": "observability",
     "label": "Observability",
     "items": [
-      { "name": "Grafana", "icon": "grafana" },
-      { "name": "Prometheus", "icon": "prometheus" }
+      {
+        "name": "Grafana",
+        "icon": "grafana",
+        "years": 1,
+        "description": "Observability dashboards for metrics, logs, and traces.",
+        "useCases": [
+          "Service dashboards",
+          "Alert visualizations"
+        ]
+      },
+      {
+        "name": "Prometheus",
+        "icon": "prometheus",
+        "years": 1,
+        "description": "Time-series database and monitoring system with PromQL query language.",
+        "useCases": [
+          "Service metrics",
+          "Alerting rules",
+          "SLO tracking"
+        ]
+      }
     ]
   }
 ]

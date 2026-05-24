@@ -14,7 +14,7 @@
       "projects": "← BACK TO PROJECTS",
       "home": "← BACK TO HOME"
     },
-    "availableForHire": "AVAILABLE FOR HIRE"
+    "availableForHire": "ONLINE"
   },
   "footer": {
     "marquee": [
@@ -22,13 +22,13 @@
       "STATIC EXPORT",
       "DEPLOYED ON GITHUB PAGES",
       "CYBERPUNK DESIGN OS",
-      "OPEN FOR OPPORTUNITIES",
+      "FREELANCER",
       "RESPONSE_TIME < 24H",
       "LOCATION ::: BRAZIL"
     ],
     "navigationHeader": "// NAVIGATION",
     "externalLinksHeader": "// EXTERNAL_LINKS",
-    "available": "AVAILABLE FOR REMOTE / HYBRID ROLES",
+    "available": "NOMINAL",
     "rights": "ALL TRANSMISSIONS SIGNED",
     "nominal": "NOMINAL",
     "nav": {
@@ -39,8 +39,43 @@
     }
   },
   "hero": {
-    "openToOpportunities": "Open to opportunities",
-    "scroll": "SCROLL"
+    "openToOpportunities": "ONLINE",
+    "scroll": "SCROLL",
+    "sessionTag": "PORTFOLIO_OS // SESSION_INITIATED",
+    "terminal": {
+      "title": "francio@portfolio_os — zsh",
+      "user": "francio",
+      "host": "portfolio_os",
+      "sequence": [
+        {
+          "cmd": "whoami",
+          "out": ["francio_xavier  ·  full-stack engineer"]
+        },
+        {
+          "cmd": "cat about.md",
+          "out": [
+            "Building systems that solve real problems.",
+            "Focus: scalability + high-performance.",
+            "Problem-solver. Continuous learner."
+          ]
+        },
+        {
+          "cmd": "ls --stack",
+          "out": [
+            "php   go        laravel      react",
+            "postgres     redis     docker     agentic-ai-development"
+          ]
+        },
+        {
+          "cmd": "status --me",
+          "out": [
+            "[●]  ONLINE",
+            "loc: brazil  ·  utc-3  ·  remote",
+            "ret: < 24h"
+          ]
+        }
+      ]
+    }
   },
   "stacks": {
     "label": "Tech Stack",
@@ -48,13 +83,29 @@
     "subtitle": "Tools and technologies I use to build, deploy, and scale production systems.",
     "count": "{categories} CATEGORIES // {modules} MODULES",
     "statusReady": "STATUS: READY // {count} MODULES LOADED",
-    "core": "[ SYSTEM_CORE: STABLE ]"
+    "core": "[ SYSTEM_CORE: STABLE ]",
+    "viewMode": "VIEW_MODE",
+    "viewCategory": "BY CATEGORY",
+    "viewExperience": "BY EXPERIENCE",
+    "sortedByExperience": "SORTED BY YEARS OF EXPERIENCE",
+    "modules": "{count} MODULES",
+    "aggregate": "AGGREGATE_EXPERIENCE :: {years} YRS",
+    "inspectTip": "click any module to inspect",
+    "tierCore": "core",
+    "tierStrong": "strong",
+    "tierFamiliar": "familiar",
+    "fieldYears": "Experience",
+    "fieldCategory": "Category",
+    "fieldTier": "Tier",
+    "yearsSuffix": "yrs",
+    "listUseCases": "USE_CASES"
   },
   "experience": {
     "label": "Work History",
     "title": "EXPERIENCE",
     "subtitle": "Professional roles — click any entry for the full technical breakdown.",
     "count": "{count} POSITIONS LOGGED",
+    "seeDetails": "SEE_DETAILS",
     "page": {
       "navBase": "POSITION",
       "coreResponsibilities": "CORE RESPONSIBILITIES",
@@ -71,6 +122,12 @@
     "wip": "◐ WIP",
     "live": "● LIVE",
     "viewProject": "VIEW PROJECT",
+    "featuredLabel": "FEATURED",
+    "featuredViewDetails": "VIEW_DETAILS",
+    "featuredStack": "stack",
+    "featuredTerminalTitle": "~/projects/featured — zsh",
+    "archiveTag": "ARCHIVE",
+    "archiveHeader": "OTHER PROJECTS",
     "page": {
       "navBase": "PROJECT",
       "wipFull": "◐ IN DEVELOPMENT",
@@ -87,17 +144,65 @@
       "projectFallback": "PROJECT"
     }
   },
+  "about": {
+    "label": "About",
+    "title": "OPERATOR_PROFILE",
+    "subtitle": "Three perspectives on the same human running this system.",
+    "dossier": {
+      "marker": "DOSSIER_01 :: PERSONNEL_FILE",
+      "idBadge": "ID_BADGE",
+      "clearance": "CLEARANCE",
+      "callsignLabel": "CALLSIGN",
+      "roleLabel": "ROLE",
+      "locLabel": "LOC",
+      "section01": "[01] PROFILE // SUMMARY",
+      "section02": "[02] ANOMALIES // CURIOSITIES",
+      "section03": "[03] AUXILIARY // SUPPLEMENTAL",
+      "signedBy": "// signed: francio@portfolio_os",
+      "barcode": "BARCODE_ID",
+      "scanCorner": "SCAN_OK"
+    },
+    "terminal": {
+      "marker": "MANIFEST_02 :: cat ~/.identity",
+      "title": "francio@portfolio_os: ~/about",
+      "tab1": "~/about.md",
+      "tab2": "~/curiosities.log",
+      "tab3": "~/etc/notes.cfg",
+      "cmd1": "$ cat about.md",
+      "cmd2": "$ tail -n 20 curiosities.log",
+      "cmd3": "$ env | grep -i operator",
+      "promptDone": "READ_ONLY",
+      "lines": "LINES",
+      "encoding": "UTF-8",
+      "metadataHeader": "// METADATA",
+      "portraitCaption": "avatar.png"
+    },
+    "orbit": {
+      "marker": "VIEWPORT_03 :: HUD_OPERATOR",
+      "reticle": "RETICLE_LOCK",
+      "operator": "OPERATOR // BIO",
+      "anomaly": "ANOMALY_LOG // PINGS",
+      "telemetry": "TELEMETRY // STATS",
+      "signal": "SIGNAL",
+      "ping": "PING",
+      "azimuth": "AZ"
+    }
+  },
   "education": {
     "label": "Academic",
     "title": "EDUCATION",
     "subtitle": "Degrees and continuous learning.",
     "count": "{count} RECORDS",
-    "active": "STATUS: ACTIVE"
+    "active": "STATUS: ACTIVE",
+    "inspectTip": "click any record to inspect",
+    "fieldPeriod": "Period",
+    "fieldFocus": "Focus",
+    "listCoursework": "COURSEWORK"
   },
   "contact": {
     "endOfFile": "END_OF_FILE // 05",
     "title": "CONNECT",
-    "subtitle": "Currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you.",
+    "subtitle": "Currently open to new opportunities as a freelancer. Whether you have a question or just want to say hi, I'll get back to you as soon as possible.",
     "externalLinksHeader": "EXTERNAL_LINKS",
     "labels": {
       "GH": "SOURCE_CODE_REPO",
@@ -129,6 +234,14 @@
       "successTitle": "MESSAGE_TRANSMITTED",
       "successDetail": "Your transmission has been successfully encrypted and sent. I will analyze the data and respond shortly."
     }
+  },
+  "inspect": {
+    "ariaInspect": "Inspect",
+    "descriptionHeading": "DESCRIPTION",
+    "closeHint": "to close",
+    "closeButton": "CLOSE",
+    "terminalSuffix": "zsh",
+    "statCommand": "stat"
   },
   "boot": {
     "lines": [

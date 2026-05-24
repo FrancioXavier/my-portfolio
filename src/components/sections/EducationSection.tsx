@@ -1,7 +1,8 @@
 import { getTranslations, getLocale } from "next-intl/server";
 import { SectionHeader } from "@/components/layout/SectionHeader";
-import { EducationCard } from "@/components/cards/EducationCard";
+import { EducationGrid } from "@/components/sections/EducationGrid";
 import { ScrollReveal } from "@/components/effects/ScrollReveal";
+import { InspectTip } from "@/components/ui/InspectTip";
 import { getEducation } from "@/data";
 import type { Locale } from "@/i18n/routing";
 
@@ -9,7 +10,6 @@ export async function EducationSection() {
   const locale = (await getLocale()) as Locale;
   const educationData = getEducation(locale);
   const t = await getTranslations({ locale, namespace: "education" });
-  const isSingle = educationData.length === 1;
 
   return (
     <section
@@ -26,22 +26,11 @@ export async function EducationSection() {
             count={t("count", {
               count: String(educationData.length).padStart(2, "0"),
             })}
+            tip={<InspectTip>{t("inspectTip")}</InspectTip>}
           />
         </ScrollReveal>
 
-        <div
-          className={
-            isSingle
-              ? "max-w-[640px]"
-              : "grid grid-cols-1 md:grid-cols-2 gap-6"
-          }
-        >
-          {educationData.map((education, index) => (
-            <ScrollReveal key={index} delay={index * 0.05}>
-              <EducationCard education={education} activeLabel={t("active")} />
-            </ScrollReveal>
-          ))}
-        </div>
+        <EducationGrid education={educationData} activeLabel={t("active")} />
       </div>
     </section>
   );
